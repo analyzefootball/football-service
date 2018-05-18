@@ -1,0 +1,7 @@
+server:
+  port: 8081
+  contextPath: /api
+management:
+  endpoint:
+    health:
+      show-details: always

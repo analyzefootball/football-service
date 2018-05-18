@@ -1,0 +1,32 @@
+plugins {
+	id 'org.springframework.boot' version '2.0.1.RELEASE'
+	id 'java'
+  id 'io.spring.dependency-management' version '1.0.5.RELEASE'
+}
+
+repositories {
+	jcenter()
+}
+
+sourceCompatibility = 1.8
+
+group = 'analyze-football'
+
+bootJar {
+    baseName = 'football-service'
+    version =  '0.0.1'
+}
+
+dependencies {
+    compile(
+            ['org.springframework.boot:spring-boot-starter-web'],
+            ['org.springframework.boot:spring-boot-starter-actuator'],
+            ['org.springframework.boot:spring-boot-starter-security'],
+						['org.springframework.boot:spring-boot-starter-hateoas'],
+            ['org.slf4j:slf4j-api:1.7.25']
+    )
+    testCompile(
+            ['junit:junit:4.12'],
+            ['org.springframework.boot:spring-boot-starter-test']
+    )
+}
