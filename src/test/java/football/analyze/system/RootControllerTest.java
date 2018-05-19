@@ -8,10 +8,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.hamcrest.CoreMatchers.equalTo;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
  * @author Hassan Mushtaq
@@ -29,6 +29,7 @@ public class RootControllerTest {
         MockHttpServletRequestBuilder request = get("/");
 
         mockMvc.perform(request)
+                .andExpect(status().isOk())
                 .andExpect(jsonPath("$._links.login.href", equalTo("http://localhost/login")));
     }
 }
