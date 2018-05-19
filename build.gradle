@@ -37,29 +37,3 @@ dependencies {
             ['com.h2database:h2']
     )
 }
-
-sourceSets {
-    integrationTest {
-        java.srcDir 'src/integrationtest/java'
-        resources.srcDir 'src/integrationtest/resources'
-    }
-}
-
-dependencies {
-    integrationTestCompile configurations.testCompile
-    integrationTestRuntime configurations.testRuntime
-    integrationTestCompile sourceSets.main.output
-    integrationTestCompile sourceSets.test.output
-}
-
-
-task integrationTest(type: Test) {
-    outputs.upToDateWhen { false }
-    description = "Run integration tests (located in src/integrationtest/...)."
-    testClassesDirs = sourceSets.integrationTest.output.classesDirs
-    classpath = sourceSets.integrationTest.runtimeClasspath
-}
-
-
-// Makes integration tests not run by default.
-check.dependsOn -= integrationTest
