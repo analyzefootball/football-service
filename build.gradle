@@ -25,6 +25,7 @@ dependencies {
             ['org.springframework.boot:spring-boot-starter-hateoas'],
             ['org.springframework.boot:spring-boot-starter-data-jpa'],
             ['mysql:mysql-connector-java'],
+            ['org.flywaydb:flyway-core'],
             ['org.slf4j:slf4j-api:1.7.25']
     )
     compileOnly(
@@ -35,3 +36,29 @@ dependencies {
             ['org.springframework.boot:spring-boot-starter-test']
     )
 }
+
+sourceSets {
+    integrationTest {
+        java.srcDir 'src/integrationtest/java'
+        resources.srcDir 'src/integrationtest/resources'
+    }
+}
+
+dependencies {
+    integrationTestCompile configurations.testCompile
+    integrationTestRuntime configurations.testRuntime
+    integrationTestCompile sourceSets.main.output
+    integrationTestCompile sourceSets.test.output
+}
+
+
+task integrationTest(type: Test) {
+    outputs.upToDateWhen { false }
+    description = "Run integration tests (located in src/integrationtest/...)."
+    testClassesDirs = sourceSets.integrationTest.output.classesDirs
+    classpath = sourceSets.integrationTest.runtimeClasspath
+}
+
+
+// Makes integration tests not run by default.
+check.dependsOn -= integrationTest

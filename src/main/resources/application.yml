@@ -11,3 +11,9 @@ spring:
     url:  ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
+  flyway:
+    sql-migration-prefix: football_script_
+    table: football_schema_migration
+    validate-on-migrate: true
+    out-of-order: false
+
