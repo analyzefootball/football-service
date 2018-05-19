@@ -1,4 +1,4 @@
-package football.analyze.users;
+package football.analyze.system;
 
 public interface UserService {
 }

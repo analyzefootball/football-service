@@ -1,4 +1,4 @@
-package football.analyze.users;
+package football.analyze.system;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

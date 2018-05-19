@@ -34,10 +34,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         this.userDetailsService = userDetailsService;
     }
 
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/VAADIN/**");
-    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -58,7 +54,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .headers()
                 .addHeaderWriter(new StaticHeadersWriter("Server", "Serving Football Analyze Application")).and()
-                .authorizeRequests().anyRequest().authenticated().and().httpBasic();
+                .authorizeRequests().anyRequest().permitAll();
     }
 
 
