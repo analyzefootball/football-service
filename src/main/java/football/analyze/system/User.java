@@ -1,12 +1,8 @@
 package football.analyze.system;
 
 import lombok.Getter;
-import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.UUID;
 
 /**
@@ -14,13 +10,14 @@ import java.util.UUID;
  * @since 5/18/18
  */
 
-@Entity
 @Getter
-@Setter
+@Entity
+@Inheritance
+@DiscriminatorColumn(name = "role")
+@Table(name = "User")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     private String displayName;
@@ -28,4 +25,15 @@ public class User {
     private Role role;
 
     private Credentials credentials;
+
+    //For jackson mapper
+    private User() {
+    }
+
+    public User(UUID id, String displayName, Role role, Credentials credentials) {
+        this.id = id;
+        this.displayName = displayName;
+        this.role = role;
+        this.credentials = credentials;
+    }
 }
