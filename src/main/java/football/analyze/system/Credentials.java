@@ -3,14 +3,11 @@ package football.analyze.system;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
-import javax.persistence.Embeddable;
-
 /**
  * @author Hassan Mushtaq
  * @since 5/19/18
  */
 @Getter
-@Embeddable
 public class Credentials {
 
     private String username;

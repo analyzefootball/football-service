@@ -7,17 +7,7 @@ management:
     health:
       show-details: always
 spring:
-  flyway:
-    sql-migration-prefix: football_script_
-    table: football_schema_migration
-    validate-on-migrate: true
-    out-of-order: false
-  h2:
-    console:
-      enabled: true
-  datasource:
-    url:  jdbc:h2:mem:db
-    username: sa
-    password: sa
-
+  data:
+    mongodb:
+      uri: mongodb://tom:jerry@localhost:28001/footballdb?authSource=admin
 

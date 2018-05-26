@@ -1,8 +1,10 @@
 package football.analyze.system;
 
+import football.analyze.common.Entity;
 import lombok.Getter;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.*;
+
 import java.util.UUID;
 
 /**
@@ -11,14 +13,7 @@ import java.util.UUID;
  */
 
 @Getter
-@Entity
-@Inheritance
-@DiscriminatorColumn(name = "role")
-@Table(name = "User")
-public class User {
-
-    @Id
-    private UUID id;
+public class User extends Entity {
 
     private String displayName;
 
@@ -28,10 +23,11 @@ public class User {
 
     //For jackson mapper
     private User() {
+        //super();
     }
 
-    public User(UUID id, String displayName, Role role, Credentials credentials) {
-        this.id = id;
+    public User(String id, String displayName, Role role, Credentials credentials) {
+        super(id);
         this.displayName = displayName;
         this.role = role;
         this.credentials = credentials;
