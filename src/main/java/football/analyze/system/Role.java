@@ -9,12 +9,6 @@ import lombok.Getter;
 @Getter
 public enum Role {
 
-    ADMIN("admin"),
-    REGULAR("regular");
+    Admin, Regular, System
 
-    private final String description;
-
-    Role(String description) {
-        this.description = description;
-    }
 }

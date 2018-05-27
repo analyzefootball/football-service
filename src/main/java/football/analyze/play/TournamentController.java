@@ -2,13 +2,11 @@ package football.analyze.play;
 
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
@@ -28,9 +26,10 @@ public class TournamentController {
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_UTF8_VALUE)
-    public ResponseEntity getAllTournaments()   {
+    public ResponseEntity getAllTournaments() {
         Resources<Tournament> resource = new Resources<>(tournamentRepository.findAll());
         resource.add(linkTo(methodOn(TournamentController.class).getAllTournaments()).withRel("self"));
+        resource.add(linkTo(methodOn(TournamentController.class).getTournament(null)).withRel("self"));
         return new ResponseEntity<>(resource, HttpStatus.OK);
     }
 
@@ -39,5 +38,13 @@ public class TournamentController {
         Resource<Tournament> resource = new Resource<>(tournamentRepository.findById(tournamentId).get());
         resource.add(linkTo(methodOn(TournamentController.class).getTournament(tournamentId)).withRel("self"));
         return new ResponseEntity<>(resource, HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity createTournament(@RequestBody Tournament tournament) {
+        tournamentRepository.save(tournament);
+        ResourceSupport restUris = new ResourceSupport();
+        restUris.add(linkTo(methodOn(TournamentController.class).getTournament(tournament.getId())).withRel("self"));
+        return new ResponseEntity<>(restUris, HttpStatus.CREATED);
     }
 }

@@ -1,0 +1,1077 @@
+{
+  "name": "Fifa 2018 World Cup",
+  "startDate": "2018-06-14",
+  "endDate": "2018-07-15",
+  "teams": [
+    {
+      "name": "Russia",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Russia.png"
+    },
+    {
+      "name": "Saudi Arabia",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Saudi_Arabia.png"
+    },
+    {
+      "name": "Egypt",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Egypt.png"
+    },
+    {
+      "name": "Uruguay",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Uruguay.png"
+    },
+    {
+      "name": "Morocco",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Morocco.png"
+    },
+    {
+      "name": "Iran",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iran.png"
+    },
+    {
+      "name": "Portugal",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Portugal.png"
+    },
+    {
+      "name": "Spain",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Spain.png"
+    },
+    {
+      "name": "France",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/France.png"
+    },
+    {
+      "name": "Australia",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Australia.png"
+    },
+    {
+      "name": "Argentina",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Argentina.png"
+    },
+    {
+      "name": "Iceland",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iceland.png"
+    },
+    {
+      "name": "Peru",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Peru.png"
+    },
+    {
+      "name": "Denmark",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Denmark.png"
+    },
+    {
+      "name": "Croatia",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Croatia.png"
+    },
+    {
+      "name": "Nigeria",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Nigeria.png"
+    },
+    {
+      "name": "Costa Rica",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Costa_Rica.png"
+    },
+    {
+      "name": "Serbia",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Serbia.png"
+    },
+    {
+      "name": "Germany",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Germany.png"
+    },
+    {
+      "name": "Mexico",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Mexico.png"
+    },
+    {
+      "name": "Brazil",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Brazil.png"
+    },
+    {
+      "name": "Switzerland",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Switzerland.png"
+    },
+    {
+      "name": "Sweden",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Sweden.png"
+    },
+    {
+      "name": "South Korea",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/South_Korea.png"
+    },
+    {
+      "name": "Belgium",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Belgium.png"
+    },
+    {
+      "name": "Panama",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Panama.png"
+    },
+    {
+      "name": "Tunisia",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Tunisia.png"
+    },
+    {
+      "name": "England",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/England.png"
+    },
+    {
+      "name": "Colombia",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Colombia.png"
+    },
+    {
+      "name": "Japan",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Japan.png"
+    },
+    {
+      "name": "Poland",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Poland.png"
+    },
+    {
+      "name": "Senegal",
+      "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Senegal.png"
+    }
+  ],
+  "groups": [
+    {
+      "teams": [
+        {
+          "name": "Germany",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Germany.png"
+        },
+        {
+          "name": "Mexico",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Mexico.png"
+        },
+        {
+          "name": "Sweden",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Sweden.png"
+        },
+        {
+          "name": "South Korea",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/South_Korea.png"
+        }
+      ],
+      "name": "Group F"
+    },
+    {
+      "teams": [
+        {
+          "name": "Costa Rica",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Costa_Rica.png"
+        },
+        {
+          "name": "Serbia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Serbia.png"
+        },
+        {
+          "name": "Brazil",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Brazil.png"
+        },
+        {
+          "name": "Switzerland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Switzerland.png"
+        }
+      ],
+      "name": "Group E"
+    },
+    {
+      "teams": [
+        {
+          "name": "Colombia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Colombia.png"
+        },
+        {
+          "name": "Japan",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Japan.png"
+        },
+        {
+          "name": "Poland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Poland.png"
+        },
+        {
+          "name": "Senegal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Senegal.png"
+        }
+      ],
+      "name": "Group H"
+    },
+    {
+      "teams": [
+        {
+          "name": "Belgium",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Belgium.png"
+        },
+        {
+          "name": "Panama",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Panama.png"
+        },
+        {
+          "name": "Tunisia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Tunisia.png"
+        },
+        {
+          "name": "England",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/England.png"
+        }
+      ],
+      "name": "Group G"
+    },
+    {
+      "teams": [
+        {
+          "name": "Morocco",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Morocco.png"
+        },
+        {
+          "name": "Iran",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iran.png"
+        },
+        {
+          "name": "Portugal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Portugal.png"
+        },
+        {
+          "name": "Spain",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Spain.png"
+        }
+      ],
+      "name": "Group B"
+    },
+    {
+      "teams": [
+        {
+          "name": "Russia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Russia.png"
+        },
+        {
+          "name": "Saudi Arabia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Saudi_Arabia.png"
+        },
+        {
+          "name": "Egypt",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Egypt.png"
+        },
+        {
+          "name": "Uruguay",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Uruguay.png"
+        }
+      ],
+      "name": "Group A"
+    },
+    {
+      "teams": [
+        {
+          "name": "Argentina",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Argentina.png"
+        },
+        {
+          "name": "Iceland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iceland.png"
+        },
+        {
+          "name": "Croatia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Croatia.png"
+        },
+        {
+          "name": "Nigeria",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Nigeria.png"
+        }
+      ],
+      "name": "Group D"
+    },
+    {
+      "teams": [
+        {
+          "name": "France",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/France.png"
+        },
+        {
+          "name": "Australia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Australia.png"
+        },
+        {
+          "name": "Peru",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Peru.png"
+        },
+        {
+          "name": "Denmark",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Denmark.png"
+        }
+      ],
+      "name": "Group C"
+    }
+  ],
+  "schedule": {
+    "matches": [
+      {
+        "dateTime": "2018-06-14T15:00",
+        "awayTeam": {
+          "name": "Saudi Arabia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Saudi_Arabia.png"
+        },
+        "homeTeam": {
+          "name": "Russia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Russia.png"
+        },
+        "matchNumber": 1
+      },
+      {
+        "dateTime": "2018-06-15T12:00",
+        "awayTeam": {
+          "name": "Uruguay",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Uruguay.png"
+        },
+        "homeTeam": {
+          "name": "Egypt",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Egypt.png"
+        },
+        "matchNumber": 2
+      },
+      {
+        "dateTime": "2018-06-15T15:00",
+        "awayTeam": {
+          "name": "Iran",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iran.png"
+        },
+        "homeTeam": {
+          "name": "Morocco",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Morocco.png"
+        },
+        "matchNumber": 3
+      },
+      {
+        "dateTime": "2018-06-15T18:00",
+        "awayTeam": {
+          "name": "Spain",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Spain.png"
+        },
+        "homeTeam": {
+          "name": "Portugal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Portugal.png"
+        },
+        "matchNumber": 4
+      },
+      {
+        "dateTime": "2018-06-16T10:00",
+        "awayTeam": {
+          "name": "Australia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Australia.png"
+        },
+        "homeTeam": {
+          "name": "France",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/France.png"
+        },
+        "matchNumber": 5
+      },
+      {
+        "dateTime": "2018-06-16T13:00",
+        "awayTeam": {
+          "name": "Iceland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iceland.png"
+        },
+        "homeTeam": {
+          "name": "Argentina",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Argentina.png"
+        },
+        "matchNumber": 6
+      },
+      {
+        "dateTime": "2018-06-16T16:00",
+        "awayTeam": {
+          "name": "Denmark",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Denmark.png"
+        },
+        "homeTeam": {
+          "name": "Peru",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Peru.png"
+        },
+        "matchNumber": 7
+      },
+      {
+        "dateTime": "2018-06-16T19:00",
+        "awayTeam": {
+          "name": "Nigeria",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Nigeria.png"
+        },
+        "homeTeam": {
+          "name": "Croatia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Croatia.png"
+        },
+        "matchNumber": 8
+      },
+      {
+        "dateTime": "2018-06-17T12:00",
+        "awayTeam": {
+          "name": "Serbia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Serbia.png"
+        },
+        "homeTeam": {
+          "name": "Costa Rica",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Costa_Rica.png"
+        },
+        "matchNumber": 9
+      },
+      {
+        "dateTime": "2018-06-17T15:00",
+        "awayTeam": {
+          "name": "Mexico",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Mexico.png"
+        },
+        "homeTeam": {
+          "name": "Germany",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Germany.png"
+        },
+        "matchNumber": 10
+      },
+      {
+        "dateTime": "2018-06-17T18:00",
+        "awayTeam": {
+          "name": "Switzerland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Switzerland.png"
+        },
+        "homeTeam": {
+          "name": "Brazil",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Brazil.png"
+        },
+        "matchNumber": 11
+      },
+      {
+        "dateTime": "2018-06-18T12:00",
+        "awayTeam": {
+          "name": "South Korea",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/South_Korea.png"
+        },
+        "homeTeam": {
+          "name": "Sweden",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Sweden.png"
+        },
+        "matchNumber": 12
+      },
+      {
+        "dateTime": "2018-06-18T15:00",
+        "awayTeam": {
+          "name": "Panama",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Panama.png"
+        },
+        "homeTeam": {
+          "name": "Belgium",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Belgium.png"
+        },
+        "matchNumber": 13
+      },
+      {
+        "dateTime": "2018-06-18T18:00",
+        "awayTeam": {
+          "name": "England",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/England.png"
+        },
+        "homeTeam": {
+          "name": "Tunisia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Tunisia.png"
+        },
+        "matchNumber": 14
+      },
+      {
+        "dateTime": "2018-06-19T12:00",
+        "awayTeam": {
+          "name": "Japan",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Japan.png"
+        },
+        "homeTeam": {
+          "name": "Colombia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Colombia.png"
+        },
+        "matchNumber": 15
+      },
+      {
+        "dateTime": "2018-06-19T15:00",
+        "awayTeam": {
+          "name": "Senegal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Senegal.png"
+        },
+        "homeTeam": {
+          "name": "Poland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Poland.png"
+        },
+        "matchNumber": 16
+      },
+      {
+        "dateTime": "2018-06-19T18:00",
+        "awayTeam": {
+          "name": "Egypt",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Egypt.png"
+        },
+        "homeTeam": {
+          "name": "Russia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Russia.png"
+        },
+        "matchNumber": 17
+      },
+      {
+        "dateTime": "2018-06-20T12:00",
+        "awayTeam": {
+          "name": "Morocco",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Morocco.png"
+        },
+        "homeTeam": {
+          "name": "Portugal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Portugal.png"
+        },
+        "matchNumber": 18
+      },
+      {
+        "dateTime": "2018-06-20T15:00",
+        "awayTeam": {
+          "name": "Saudi Arabia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Saudi_Arabia.png"
+        },
+        "homeTeam": {
+          "name": "Uruguay",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Uruguay.png"
+        },
+        "matchNumber": 19
+      },
+      {
+        "dateTime": "2018-06-20T18:00",
+        "awayTeam": {
+          "name": "Spain",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Spain.png"
+        },
+        "homeTeam": {
+          "name": "Iran",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iran.png"
+        },
+        "matchNumber": 20
+      },
+      {
+        "dateTime": "2018-06-21T12:00",
+        "awayTeam": {
+          "name": "Australia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Australia.png"
+        },
+        "homeTeam": {
+          "name": "Denmark",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Denmark.png"
+        },
+        "matchNumber": 21
+      },
+      {
+        "dateTime": "2018-06-21T15:00",
+        "awayTeam": {
+          "name": "Peru",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Peru.png"
+        },
+        "homeTeam": {
+          "name": "France",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/France.png"
+        },
+        "matchNumber": 22
+      },
+      {
+        "dateTime": "2018-06-21T18:00",
+        "awayTeam": {
+          "name": "Croatia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Croatia.png"
+        },
+        "homeTeam": {
+          "name": "Argentina",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Argentina.png"
+        },
+        "matchNumber": 23
+      },
+      {
+        "dateTime": "2018-06-22T12:00",
+        "awayTeam": {
+          "name": "Costa Rica",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Costa_Rica.png"
+        },
+        "homeTeam": {
+          "name": "Brazil",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Brazil.png"
+        },
+        "matchNumber": 24
+      },
+      {
+        "dateTime": "2018-06-22T15:00",
+        "awayTeam": {
+          "name": "Iceland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iceland.png"
+        },
+        "homeTeam": {
+          "name": "Nigeria",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Nigeria.png"
+        },
+        "matchNumber": 25
+      },
+      {
+        "dateTime": "2018-06-22T18:00",
+        "awayTeam": {
+          "name": "Switzerland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Switzerland.png"
+        },
+        "homeTeam": {
+          "name": "Serbia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Serbia.png"
+        },
+        "matchNumber": 26
+      },
+      {
+        "dateTime": "2018-06-23T12:00",
+        "awayTeam": {
+          "name": "Tunisia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Tunisia.png"
+        },
+        "homeTeam": {
+          "name": "Belgium",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Belgium.png"
+        },
+        "matchNumber": 27
+      },
+      {
+        "dateTime": "2018-06-23T15:00",
+        "awayTeam": {
+          "name": "Mexico",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Mexico.png"
+        },
+        "homeTeam": {
+          "name": "South Korea",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/South_Korea.png"
+        },
+        "matchNumber": 28
+      },
+      {
+        "dateTime": "2018-06-23T18:00",
+        "awayTeam": {
+          "name": "Sweden",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Sweden.png"
+        },
+        "homeTeam": {
+          "name": "Germany",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Germany.png"
+        },
+        "matchNumber": 29
+      },
+      {
+        "dateTime": "2018-06-24T12:00",
+        "awayTeam": {
+          "name": "Panama",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Panama.png"
+        },
+        "homeTeam": {
+          "name": "England",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/England.png"
+        },
+        "matchNumber": 30
+      },
+      {
+        "dateTime": "2018-06-24T15:00",
+        "awayTeam": {
+          "name": "Senegal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Senegal.png"
+        },
+        "homeTeam": {
+          "name": "Japan",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Japan.png"
+        },
+        "matchNumber": 31
+      },
+      {
+        "dateTime": "2018-06-24T18:00",
+        "awayTeam": {
+          "name": "Colombia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Colombia.png"
+        },
+        "homeTeam": {
+          "name": "Poland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Poland.png"
+        },
+        "matchNumber": 32
+      },
+      {
+        "dateTime": "2018-06-25T14:00",
+        "awayTeam": {
+          "name": "Egypt",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Egypt.png"
+        },
+        "homeTeam": {
+          "name": "Saudi Arabia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Saudi_Arabia.png"
+        },
+        "matchNumber": 33
+      },
+      {
+        "dateTime": "2018-06-25T14:00",
+        "awayTeam": {
+          "name": "Russia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Russia.png"
+        },
+        "homeTeam": {
+          "name": "Uruguay",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Uruguay.png"
+        },
+        "matchNumber": 34
+      },
+      {
+        "dateTime": "2018-06-25T18:00",
+        "awayTeam": {
+          "name": "Portugal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Portugal.png"
+        },
+        "homeTeam": {
+          "name": "Iran",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iran.png"
+        },
+        "matchNumber": 35
+      },
+      {
+        "dateTime": "2018-06-25T18:00",
+        "awayTeam": {
+          "name": "Morocco",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Morocco.png"
+        },
+        "homeTeam": {
+          "name": "Spain",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Spain.png"
+        },
+        "matchNumber": 36
+      },
+      {
+        "dateTime": "2018-06-26T14:00",
+        "awayTeam": {
+          "name": "Peru",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Peru.png"
+        },
+        "homeTeam": {
+          "name": "Australia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Australia.png"
+        },
+        "matchNumber": 37
+      },
+      {
+        "dateTime": "2018-06-26T14:00",
+        "awayTeam": {
+          "name": "France",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/France.png"
+        },
+        "homeTeam": {
+          "name": "Denmark",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Denmark.png"
+        },
+        "matchNumber": 38
+      },
+      {
+        "dateTime": "2018-06-26T18:00",
+        "awayTeam": {
+          "name": "Argentina",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Argentina.png"
+        },
+        "homeTeam": {
+          "name": "Nigeria",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Nigeria.png"
+        },
+        "matchNumber": 39
+      },
+      {
+        "dateTime": "2018-06-26T18:00",
+        "awayTeam": {
+          "name": "Croatia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Croatia.png"
+        },
+        "homeTeam": {
+          "name": "Iceland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iceland.png"
+        },
+        "matchNumber": 40
+      },
+      {
+        "dateTime": "2018-06-27T14:00",
+        "awayTeam": {
+          "name": "Germany",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Germany.png"
+        },
+        "homeTeam": {
+          "name": "South Korea",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/South_Korea.png"
+        },
+        "matchNumber": 41
+      },
+      {
+        "dateTime": "2018-06-27T14:00",
+        "awayTeam": {
+          "name": "Sweden",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Sweden.png"
+        },
+        "homeTeam": {
+          "name": "Mexico",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Mexico.png"
+        },
+        "matchNumber": 42
+      },
+      {
+        "dateTime": "2018-06-27T18:00",
+        "awayTeam": {
+          "name": "Costa Rica",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Costa_Rica.png"
+        },
+        "homeTeam": {
+          "name": "Switzerland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Switzerland.png"
+        },
+        "matchNumber": 43
+      },
+      {
+        "dateTime": "2018-06-27T18:00",
+        "awayTeam": {
+          "name": "Brazil",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Brazil.png"
+        },
+        "homeTeam": {
+          "name": "Serbia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Serbia.png"
+        },
+        "matchNumber": 44
+      },
+      {
+        "dateTime": "2018-06-28T14:00",
+        "awayTeam": {
+          "name": "Colombia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Colombia.png"
+        },
+        "homeTeam": {
+          "name": "Senegal",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Senegal.png"
+        },
+        "matchNumber": 45
+      },
+      {
+        "dateTime": "2018-06-28T14:00",
+        "awayTeam": {
+          "name": "Poland",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Poland.png"
+        },
+        "homeTeam": {
+          "name": "Japan",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Japan.png"
+        },
+        "matchNumber": 46
+      },
+      {
+        "dateTime": "2018-06-28T18:00",
+        "awayTeam": {
+          "name": "Belgium",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Belgium.png"
+        },
+        "homeTeam": {
+          "name": "England",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/England.png"
+        },
+        "matchNumber": 47
+      },
+      {
+        "dateTime": "2018-06-28T18:00",
+        "awayTeam": {
+          "name": "Tunisia",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Tunisia.png"
+        },
+        "homeTeam": {
+          "name": "Panama",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Panama.png"
+        },
+        "matchNumber": 48
+      },
+      {
+        "dateTime": "2018-06-30T14:00",
+        "awayTeam": {
+          "name": "2B",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2B.png"
+        },
+        "homeTeam": {
+          "name": "1A",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1A.png"
+        },
+        "matchNumber": 49
+      },
+      {
+        "dateTime": "2018-06-30T18:00",
+        "awayTeam": {
+          "name": "2D",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2D.png"
+        },
+        "homeTeam": {
+          "name": "1C",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1C.png"
+        },
+        "matchNumber": 50
+      },
+      {
+        "dateTime": "2018-07-01T14:00",
+        "awayTeam": {
+          "name": "2A",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2A.png"
+        },
+        "homeTeam": {
+          "name": "1B",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1B.png"
+        },
+        "matchNumber": 51
+      },
+      {
+        "dateTime": "2018-07-01T18:00",
+        "awayTeam": {
+          "name": "2C",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2C.png"
+        },
+        "homeTeam": {
+          "name": "1D",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1D.png"
+        },
+        "matchNumber": 52
+      },
+      {
+        "dateTime": "2018-07-02T14:00",
+        "awayTeam": {
+          "name": "2F",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2F.png"
+        },
+        "homeTeam": {
+          "name": "1E",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1E.png"
+        },
+        "matchNumber": 53
+      },
+      {
+        "dateTime": "2018-07-02T18:00",
+        "awayTeam": {
+          "name": "2H",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2H.png"
+        },
+        "homeTeam": {
+          "name": "1G",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1G.png"
+        },
+        "matchNumber": 54
+      },
+      {
+        "dateTime": "2018-07-03T14:00",
+        "awayTeam": {
+          "name": "2E",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2E.png"
+        },
+        "homeTeam": {
+          "name": "1F",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1F.png"
+        },
+        "matchNumber": 55
+      },
+      {
+        "dateTime": "2018-07-03T18:00",
+        "awayTeam": {
+          "name": "2G",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2G.png"
+        },
+        "homeTeam": {
+          "name": "1H",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1H.png"
+        },
+        "matchNumber": 56
+      },
+      {
+        "dateTime": "2018-07-06T14:00",
+        "awayTeam": {
+          "name": "W50",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W50.png"
+        },
+        "homeTeam": {
+          "name": "W49",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W49.png"
+        },
+        "matchNumber": 57
+      },
+      {
+        "dateTime": "2018-07-06T18:00",
+        "awayTeam": {
+          "name": "W54",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W54.png"
+        },
+        "homeTeam": {
+          "name": "W53",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W53.png"
+        },
+        "matchNumber": 58
+      },
+      {
+        "dateTime": "2018-07-07T14:00",
+        "awayTeam": {
+          "name": "W52",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W52.png"
+        },
+        "homeTeam": {
+          "name": "W51",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W51.png"
+        },
+        "matchNumber": 59
+      },
+      {
+        "dateTime": "2018-07-07T18:00",
+        "awayTeam": {
+          "name": "W56",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W56.png"
+        },
+        "homeTeam": {
+          "name": "W55",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W55.png"
+        },
+        "matchNumber": 60
+      },
+      {
+        "dateTime": "2018-07-10T18:00",
+        "awayTeam": {
+          "name": "W58",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W58.png"
+        },
+        "homeTeam": {
+          "name": "W57",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W57.png"
+        },
+        "matchNumber": 61
+      },
+      {
+        "dateTime": "2018-07-11T18:00",
+        "awayTeam": {
+          "name": "W60",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W60.png"
+        },
+        "homeTeam": {
+          "name": "W59",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W59.png"
+        },
+        "matchNumber": 62
+      },
+      {
+        "dateTime": "2018-07-14T14:00",
+        "awayTeam": {
+          "name": "L62",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/L62.png"
+        },
+        "homeTeam": {
+          "name": "L61",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/L61.png"
+        },
+        "matchNumber": 63
+      },
+      {
+        "dateTime": "2018-07-15T15:00",
+        "awayTeam": {
+          "name": "W62",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W62.png"
+        },
+        "homeTeam": {
+          "name": "W61",
+          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W61.png"
+        },
+        "matchNumber": 64
+      }
+    ]
+  }
+}

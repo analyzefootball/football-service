@@ -26,6 +26,13 @@ public class User extends Entity {
         //super();
     }
 
+    public User(String displayName, Role role, Credentials credentials) {
+        super();
+        this.displayName = displayName;
+        this.role = role;
+        this.credentials = credentials;
+    }
+
     public User(String id, String displayName, Role role, Credentials credentials) {
         super(id);
         this.displayName = displayName;

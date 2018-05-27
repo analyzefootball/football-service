@@ -27,8 +27,8 @@ public class UserController {
 
     @GetMapping(produces = MediaTypes.HAL_JSON_UTF8_VALUE)
     public ResponseEntity getAllUsers() {
-        User user1 = new User(UUID.randomUUID().toString(), "user1", Role.ADMIN, new Credentials("user1@aabc.com", "password"));
-        User user2 = new User(UUID.randomUUID().toString(), "user2", Role.REGULAR, new Credentials("user2@aabc.com", "password2"));
+        User user1 = new User(UUID.randomUUID().toString(), "user1", Role.Admin, new Credentials("user1@aabc.com", "password"));
+        User user2 = new User(UUID.randomUUID().toString(), "user2", Role.Regular, new Credentials("user2@aabc.com", "password2"));
         List<User> users = Arrays.asList(user1, user2);
         Resources<User> resource = new Resources<>(users);
         resource.add(linkTo(methodOn(UserController.class).getAllUsers()).withRel("self"));
@@ -37,7 +37,7 @@ public class UserController {
 
     @GetMapping(value = "{username}", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
     public ResponseEntity getUser(@PathVariable String username) {
-        User user1 = new User(UUID.randomUUID().toString(), "user1", Role.ADMIN, new Credentials(username, "password"));
+        User user1 = new User(UUID.randomUUID().toString(), "user1", Role.Admin, new Credentials(username, "password"));
         Resource<User> resource = new Resource<>(user1);
         resource.add(linkTo(methodOn(UserController.class).getUser(username)).withRel("self"));
         return new ResponseEntity<>(resource, HttpStatus.OK);
