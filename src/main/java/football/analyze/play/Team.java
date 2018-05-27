@@ -13,14 +13,11 @@ public class Team {
 
     private String flagUrl;
 
-    private int seeding;
-
     private Team() {
     }
 
-    public Team(String name, String flagUrl, int seeding) {
+    public Team(String name, String flagUrl) {
         this.name = name;
         this.flagUrl = flagUrl;
-        this.seeding = seeding;
     }
 }

@@ -18,6 +18,8 @@ public class Match {
 
     private LocalDateTime dateTime;
 
+    private Integer matchNumber;
+
     @Setter
     private Integer homeTeamScore;
 
@@ -27,9 +29,10 @@ public class Match {
     private Match() {
     }
 
-    public Match(Team homeTeam, Team awayTeam, LocalDateTime dateTime) {
+    public Match(Team homeTeam, Team awayTeam, LocalDateTime dateTime, Integer matchNumber) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.dateTime = dateTime;
+        this.matchNumber = matchNumber;
     }
 }
