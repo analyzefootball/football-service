@@ -9,5 +9,5 @@ management:
 spring:
   data:
     mongodb:
-      uri: mongodb://tom:jerry@localhost:28001/footballdb?authSource=admin
+      uri: ${DB_URL}
 
