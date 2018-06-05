@@ -1,6 +1,7 @@
 package football.analyze.config;
 
 import football.analyze.system.JWTAuthenticationFilter;
+import football.analyze.system.JWTAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -41,20 +42,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http.csrf().disable()
-//                .headers()
-//                .addHeaderWriter(new StaticHeadersWriter("Server", "Serving Football Analyze Application")).and()
-//                .authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll().and()
-//                .authorizeRequests().antMatchers("/actuator/**").permitAll().and()
-//                .authorizeRequests().antMatchers("/static/**").permitAll().and()
-//                .authorizeRequests().antMatchers("/vaadinServlet/UIDL/**").permitAll().and()
-//                .authorizeRequests().antMatchers("/vaadinServlet/HEARTBEAT/**").permitAll()
-//                .anyRequest().authenticated().and()
-//                .formLogin().failureUrl("/?error").defaultSuccessUrl("/predictions")
-//                .loginPage("/").permitAll()
-//                .loginProcessingUrl("/api/login")
-//                .and().logout().logoutUrl("/api/logout").logoutSuccessUrl("/").permitAll();
-
         http.csrf().disable()
                 .headers()
                 .addHeaderWriter(new StaticHeadersWriter("Server", "Serving Football Analyze Application")).and()
@@ -65,6 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests().anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager(), jwtSecret))
+                .addFilter(new JWTAuthorizationFilter(authenticationManager(), jwtSecret))
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
