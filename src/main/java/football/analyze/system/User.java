@@ -1,11 +1,8 @@
 package football.analyze.system;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import football.analyze.common.Entity;
 import lombok.Getter;
-import org.springframework.data.annotation.Id;
-
-
-import java.util.UUID;
 
 /**
  * @author Hassan Mushtaq
@@ -19,24 +16,29 @@ public class User extends Entity {
 
     private Role role;
 
-    private Credentials credentials;
+    private String username;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
 
     //For jackson mapper
     private User() {
         //super();
     }
 
-    public User(String displayName, Role role, Credentials credentials) {
+    public User(String displayName, Role role, String username, String password) {
         super();
         this.displayName = displayName;
         this.role = role;
-        this.credentials = credentials;
+        this.username = username;
+        this.password = password;
     }
 
-    public User(String id, String displayName, Role role, Credentials credentials) {
+    public User(String id, String displayName, Role role, String username, String password) {
         super(id);
         this.displayName = displayName;
         this.role = role;
-        this.credentials = credentials;
+        this.username = username;
+        this.password = password;
     }
 }

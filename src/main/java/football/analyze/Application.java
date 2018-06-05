@@ -1,16 +1,16 @@
 package football.analyze;
 
-import football.analyze.play.*;
+import football.analyze.play.TournamentRepository;
+import football.analyze.system.User;
+import football.analyze.system.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
 import java.util.TimeZone;
 
 /**
@@ -25,9 +25,17 @@ public class Application implements CommandLineRunner {
     @Autowired
     private TournamentRepository tournamentRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
     @PostConstruct
     void init() {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+    }
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     public static void main(String... args) {
@@ -36,6 +44,10 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+//        User user = new User("Hassan Mushtaq", football.analyze.system.Role.ADMIN,
+//                "hmushtaq@gmail.com", new BCryptPasswordEncoder().encode("Zaq!23wsx"));
+//        userRepository.save(user);
+
 //        LocalDate startDate = LocalDate.of(2018, 6, 14);
 //        LocalDate endDate = LocalDate.of(2018, 7, 15);
 //        Team saudi = new Team("Saudi Arabia",
