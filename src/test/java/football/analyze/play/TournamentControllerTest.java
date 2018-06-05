@@ -1,25 +1,34 @@
 package football.analyze.play;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.hateoas.MediaTypes;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.util.ResourceUtils;
-import static org.hamcrest.CoreMatchers.is;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Date;
 
-import static org.hamcrest.CoreMatchers.equalTo;
+import static football.analyze.system.SecurityConstants.AUTHORITIES;
+import static org.hamcrest.CoreMatchers.is;
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
 /**
  * @author Hassan Mushtaq
@@ -27,8 +36,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@AutoConfigureMockMvc
-@ActiveProfiles("test")
 public class TournamentControllerTest {
 
     @Autowired
@@ -37,8 +44,21 @@ public class TournamentControllerTest {
     @Autowired
     private TournamentRepository tournamentRepository;
 
-    @Autowired
     private MockMvc mockMvc;
+
+    @Autowired
+    private WebApplicationContext webApplicationContext;
+
+    @Value("${jwt.secret}")
+    private String jwtSecret;
+
+    private String token;
+
+    @Before
+    public void setup() throws UnsupportedEncodingException {
+        mockMvc = webAppContextSetup(webApplicationContext).apply(springSecurity()).build();
+        token = createJWT();
+    }
 
     @Test
     public void testTournamentControllerMethods() throws Exception {
@@ -46,7 +66,8 @@ public class TournamentControllerTest {
         Tournament tournament = jacksonObjectMapper.readValue(file, Tournament.class);
         tournamentRepository.save(tournament);
 
-        MockHttpServletRequestBuilder request = get("/tournaments/" + tournament.getId());
+        MockHttpServletRequestBuilder request =
+                get("/tournaments/" + tournament.getId()).header("Authorization", "Bearer " + token);
 
         mockMvc.perform(request)
                 .andExpect(status().isOk())
@@ -54,5 +75,17 @@ public class TournamentControllerTest {
                 .andExpect(jsonPath("$._links.self.href", is("http://localhost/tournaments/" + tournament.getId())))
                 .andExpect(jsonPath("$.name", is("Fifa 2018 World Cup")));
 
+    }
+
+    private String createJWT() throws UnsupportedEncodingException {
+        ZonedDateTime zdt = LocalDateTime.now().plusMinutes(30).atZone(ZoneId.systemDefault());
+        Date expireDate = Date.from(zdt.toInstant());
+        String[] grantedAuthorities = {"ROLE_ADMIN"};
+        return JWT.create().withSubject("admin")
+                .withArrayClaim(AUTHORITIES, grantedAuthorities)
+                .withClaim("admin", true)
+                .withClaim("displayName", "Super Admin")
+                .withExpiresAt(expireDate)
+                .sign(Algorithm.HMAC512(jwtSecret));
     }
 }

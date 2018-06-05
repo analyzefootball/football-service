@@ -1,9 +1,12 @@
 package football.analyze.system;
 
+import football.analyze.play.TournamentRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
@@ -19,17 +22,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = RootController.class, secure = false)
+@AutoConfigureMockMvc
 public class RootControllerTest {
+
+    @MockBean
+    private TournamentRepository tournamentRepository;
+
+    @MockBean
+    private UserRepository userRepository;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void hasCorrectLoginUrl() throws Exception {
+    public void hasCorrectUrls() throws Exception {
         MockHttpServletRequestBuilder request = get("/");
 
         mockMvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$._links.login.href", equalTo("http://localhost/login")));
+                .andExpect(jsonPath("$._links.users.href", equalTo("http://localhost/users")))
+                .andExpect(jsonPath("$._links.tournaments.href", equalTo("http://localhost/tournaments")));
     }
 }
