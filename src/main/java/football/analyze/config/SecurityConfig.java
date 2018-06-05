@@ -2,6 +2,7 @@ package football.analyze.config;
 
 import football.analyze.system.JWTAuthenticationFilter;
 import football.analyze.system.JWTAuthorizationFilter;
+import football.analyze.system.UserRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -31,12 +32,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final String jwtSecret;
 
+    private final UserRepository userRepository;
+
     public SecurityConfig(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService,
                           BCryptPasswordEncoder bCryptPasswordEncoder,
-                          @Value("${jwt.secret}") String jwtSecret) {
+                          @Value("${jwt.secret}") String jwtSecret, UserRepository userRepository) {
         this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.jwtSecret = jwtSecret;
+        this.userRepository = userRepository;
     }
 
 
@@ -51,7 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests().anyRequest().authenticated()
                 .and()
-                .addFilter(new JWTAuthenticationFilter(authenticationManager(), jwtSecret))
+                .addFilter(new JWTAuthenticationFilter(authenticationManager(), jwtSecret, userRepository))
                 .addFilter(new JWTAuthorizationFilter(authenticationManager(), jwtSecret))
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }

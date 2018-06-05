@@ -41,4 +41,8 @@ public class User extends Entity {
         this.username = username;
         this.password = password;
     }
+
+    public boolean isAdmin()    {
+        return role.equals(Role.ADMIN);
+    }
 }

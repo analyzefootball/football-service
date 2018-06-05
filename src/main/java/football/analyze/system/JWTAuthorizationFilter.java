@@ -22,8 +22,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static football.analyze.system.SecurityConstants.HEADER_STRING;
-import static football.analyze.system.SecurityConstants.TOKEN_PREFIX;
+import static football.analyze.system.SecurityConstants.*;
 
 /**
  * @author Hassan Mushtaq
@@ -66,7 +65,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 
             String user = jwt.getSubject();
 
-            Claim claim = jwt.getClaim("roles");
+            Claim claim = jwt.getClaim(AUTHORITIES);
 
             List<String> roleList = claim.asList(String.class);
 

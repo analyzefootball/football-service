@@ -23,8 +23,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.stream.Collectors;
 
-import static football.analyze.system.SecurityConstants.HEADER_STRING;
-import static football.analyze.system.SecurityConstants.TOKEN_PREFIX;
+import static football.analyze.system.SecurityConstants.*;
 
 /**
  * @author Hassan Mushtaq
@@ -36,10 +35,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     private final String jwtSecret;
 
+    private final UserRepository userRepository;
+
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager,
-                                   String jwtSecret) {
+                                   String jwtSecret, UserRepository userRepository) {
         this.authenticationManager = authenticationManager;
         this.jwtSecret = jwtSecret;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -71,14 +73,18 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) auth.getPrincipal();
 
+        User appUser = userRepository.findByUsername(user.getUsername());
+
         Collection<GrantedAuthority> grantedAuthorities = user.getAuthorities();
 
-        String[] roles = new String[grantedAuthorities.size()];
+        String[] authorities = new String[grantedAuthorities.size()];
 
-        grantedAuthorities.stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()).toArray(roles);
+        grantedAuthorities.stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()).toArray(authorities);
 
         String token = JWT.create().withSubject(user.getUsername())
-                .withArrayClaim("roles", roles)
+                .withArrayClaim(AUTHORITIES, authorities)
+                .withClaim("admin", appUser.isAdmin())
+                .withClaim("displayName", appUser.getDisplayName())
                 .withExpiresAt(expireDate)
                 .sign(Algorithm.HMAC512(jwtSecret));
 
