@@ -34,15 +34,7 @@ public class User extends Entity {
         this.password = password;
     }
 
-    public User(String id, String displayName, Role role, String username, String password) {
-        super(id);
-        this.displayName = displayName;
-        this.role = role;
-        this.username = username;
-        this.password = password;
-    }
-
-    public boolean isAdmin()    {
+    public boolean isAdmin() {
         return role.equals(Role.ADMIN);
     }
 }

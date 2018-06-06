@@ -41,41 +41,34 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     protected void doFilterInternal(HttpServletRequest req,
                                     HttpServletResponse res,
                                     FilterChain chain) throws IOException, ServletException {
-        String header = req.getHeader(HEADER_STRING);
+        String token = req.getHeader(HEADER_STRING);
 
-        if (header == null || !header.startsWith(TOKEN_PREFIX)) {
+        if (token == null || !token.startsWith(TOKEN_PREFIX)) {
             chain.doFilter(req, res);
             return;
         }
 
-        UsernamePasswordAuthenticationToken authentication = getAuthentication(req);
+        UsernamePasswordAuthenticationToken authentication = getAuthentication(token.replace(TOKEN_PREFIX, ""));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
         chain.doFilter(req, res);
     }
 
-    private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) throws UnsupportedEncodingException {
-        String token = request.getHeader(HEADER_STRING);
-        if (token != null) {
-            // parse the token.
-            Algorithm algorithm = Algorithm.HMAC512(jwtSecret);
-            JWTVerifier verifier = JWT.require(algorithm)
-                    .build(); //Reusable verifier instance
-            DecodedJWT jwt = verifier.verify(token.replace(TOKEN_PREFIX, ""));
+    private UsernamePasswordAuthenticationToken getAuthentication(String token) throws UnsupportedEncodingException {
+        // parse the token.
+        Algorithm algorithm = Algorithm.HMAC512(jwtSecret);
+        JWTVerifier verifier = JWT.require(algorithm)
+                .build();
+        DecodedJWT jwt = verifier.verify(token.replace(TOKEN_PREFIX, ""));
 
-            String user = jwt.getSubject();
+        String user = jwt.getSubject();
 
-            Claim claim = jwt.getClaim(AUTHORITIES);
+        Claim claim = jwt.getClaim(AUTHORITIES);
 
-            List<String> roleList = claim.asList(String.class);
+        List<String> roleList = claim.asList(String.class);
 
-            List<GrantedAuthority> grantedAuthorities = roleList.stream().map((Function<String, GrantedAuthority>) SimpleGrantedAuthority::new).collect(Collectors.toList());
+        List<GrantedAuthority> grantedAuthorities = roleList.stream().map((Function<String, GrantedAuthority>) SimpleGrantedAuthority::new).collect(Collectors.toList());
 
-            if (user != null) {
-                return new UsernamePasswordAuthenticationToken(user, null, grantedAuthorities);
-            }
-            return null;
-        }
-        return null;
+        return new UsernamePasswordAuthenticationToken(user, null, grantedAuthorities);
     }
 }

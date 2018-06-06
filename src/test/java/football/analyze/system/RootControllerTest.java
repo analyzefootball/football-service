@@ -21,8 +21,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @since 5/19/18
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest(value = RootController.class, secure = false)
-@AutoConfigureMockMvc
+@WebMvcTest(value = RootController.class)
+@AutoConfigureMockMvc(secure = false)
 public class RootControllerTest {
 
     @MockBean
