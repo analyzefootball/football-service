@@ -10,6 +10,19 @@ spring:
   data:
     mongodb:
       uri: ${DB_URL}
-
+  mail:
+    host: email-smtp.us-west-2.amazonaws.com
+    username: ${smtp_user}
+    password: ${smtp_password}
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          port: 25
+          auth: true
+          starttls:
+            enable: true
+            required: true
 jwt:
   secret : ${JWT_SECRET}

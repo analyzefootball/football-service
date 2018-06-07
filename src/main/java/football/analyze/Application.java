@@ -1,9 +1,5 @@
 package football.analyze;
 
-import football.analyze.play.TournamentRepository;
-import football.analyze.system.User;
-import football.analyze.system.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,12 +17,6 @@ import java.util.TimeZone;
  */
 @SpringBootApplication
 public class Application implements CommandLineRunner {
-
-    @Autowired
-    private TournamentRepository tournamentRepository;
-
-    @Autowired
-    private UserRepository userRepository;
 
     @PostConstruct
     void init() {

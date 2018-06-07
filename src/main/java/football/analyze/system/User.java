@@ -23,7 +23,6 @@ public class User extends Entity {
 
     //For jackson mapper
     private User() {
-        //super();
     }
 
     public User(String displayName, Role role, String username, String password) {
