@@ -46,7 +46,8 @@ public class InvitationController {
 
     @PostMapping
     public ResponseEntity sendInvite(@RequestBody Invitation invitation) {
-        invitationService.sendInvite(invitation);
+        String link = linkTo(methodOn(InvitationController.class).getInvitation(invitation.getId())).toString();
+        invitationService.sendInvite(invitation, link);
         ResourceSupport restUris = new ResourceSupport();
         restUris.add(linkTo(methodOn(InvitationController.class).getInvitation(invitation.getId())).withRel("self"));
         return new ResponseEntity<>(restUris, HttpStatus.CREATED);

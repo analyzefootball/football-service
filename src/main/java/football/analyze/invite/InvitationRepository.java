@@ -7,4 +7,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @since 6/6/18
  */
 public interface InvitationRepository extends MongoRepository<Invitation, String> {
+
+    Invitation findByEmail(String email);
+
 }

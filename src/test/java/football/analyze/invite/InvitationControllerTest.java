@@ -1,5 +1,6 @@
 package football.analyze.invite;
 
+import football.analyze.system.Role;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -7,17 +8,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.hateoas.MediaTypes;
 import org.springframework.http.MediaType;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.startsWith;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
  * @author Hassan Mushtaq
@@ -45,7 +52,52 @@ public class InvitationControllerTest {
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$._links.self.href", startsWith("http://localhost/invitation")));
 
-        Mockito.verify(invitationService).sendInvite(Mockito.any(Invitation.class));
+        Mockito.verify(invitationService).sendInvite(Mockito.any(Invitation.class), eq("http://localhost/invitation/{inviteId}"));
     }
 
+    @Test
+    public void getAllInvitesShouldReturnInvitations() throws Exception {
+        Invitation invitation1 = new Invitation("anc@abc.com", Role.REGULAR);
+        List<Invitation> invitations = Arrays.asList(invitation1);
+        when(invitationService.findAll()).thenReturn(invitations);
+        MockHttpServletRequestBuilder request = get("/invitation");
+
+        MvcResult result = mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaTypes.HAL_JSON_UTF8_VALUE))
+                .andReturn();
+
+        assertTrue(result.getResponse().getContentAsString().contains("\"email\":\"anc@abc.com\""));
+        assertTrue(result.getResponse().getContentAsString().contains("\"role\":\"REGULAR\""));
+        assertTrue(result.getResponse().getContentAsString().contains("\"accepted\":false"));
+        assertTrue(result.getResponse().getContentAsString().contains("\"createDate\""));
+    }
+
+    @Test
+    public void getInviteByIdShouldReturnInvitation() throws Exception {
+        String id = "someid";
+        Invitation invitation = new Invitation("anc@abc.com", Role.REGULAR);
+        when(invitationService.findById(id)).thenReturn(invitation);
+        MockHttpServletRequestBuilder request = get("/invitation/"+id);
+
+        MvcResult result = mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaTypes.HAL_JSON_UTF8_VALUE))
+                .andReturn();
+
+        assertTrue(result.getResponse().getContentAsString().contains("\"email\":\"anc@abc.com\""));
+        assertTrue(result.getResponse().getContentAsString().contains("\"role\":\"REGULAR\""));
+        assertTrue(result.getResponse().getContentAsString().contains("\"accepted\":false"));
+        assertTrue(result.getResponse().getContentAsString().contains("\"createDate\""));
+    }
+
+    @Test
+    public void getInviteByIdShouldReturnNotFoundIfMissingInvitation() throws Exception {
+        String id = "someid";
+        when(invitationService.findById(id)).thenReturn(null);
+        MockHttpServletRequestBuilder request = get("/invitation/"+id);
+
+        mockMvc.perform(request)
+                .andExpect(status().isNotFound());
+    }
 }

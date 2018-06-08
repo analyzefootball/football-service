@@ -4,6 +4,21 @@ spring:
       port: 0
   profiles:
     active: test
+  mail:
+    host: localhost
+    username: username
+    password: secret
+    port: 2525
+    properties:
+      mail:
+        debug: false
+        smtp:
+          debug: false
+          auth: true
+          starttls: true
+    protocol: smtp
 jwt:
   secret: FWCB-BP3tI~THRm
+
+
 

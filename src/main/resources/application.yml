@@ -19,7 +19,7 @@ spring:
         transport:
           protocol: smtp
         smtp:
-          port: 25
+          port: 587
           auth: true
           starttls:
             enable: true

@@ -1,7 +1,6 @@
 package football.analyze.invite;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Hassan Mushtaq
@@ -9,7 +8,7 @@ import java.util.Optional;
  */
 public interface InvitationService {
 
-    void sendInvite(Invitation invitation);
+    void sendInvite(Invitation invitation, String link);
 
     List<Invitation> findAll();
 

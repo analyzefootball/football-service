@@ -35,6 +35,7 @@ dependencies {
             ['junit:junit:4.12'],
             ['org.springframework.boot:spring-boot-starter-test'],
             ['org.springframework.security:spring-security-test'],
-            ['de.flapdoodle.embed:de.flapdoodle.embed.mongo']
+            ['de.flapdoodle.embed:de.flapdoodle.embed.mongo'],
+            ['com.icegreen:greenmail:1.5.7']
     )
 }

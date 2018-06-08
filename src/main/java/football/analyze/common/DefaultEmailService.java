@@ -1,8 +1,12 @@
 package football.analyze.common;
 
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 
 /**
  * @author Hassan Mushtaq
@@ -18,12 +22,14 @@ public class DefaultEmailService implements EmailService {
     }
 
     @Override
-    public void sendMail(Email email) {
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo(email.getTo());
-        mailMessage.setSubject(email.getSubject());
-        mailMessage.setFrom(email.getFrom());
-        mailMessage.setText(email.getBody());
-        emailSender.send(mailMessage);
+    @Async
+    public void sendMail(Email email) throws Exception {
+        MimeMessage mail = emailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(mail, true);
+        helper.setFrom(email.getFrom());
+        helper.setTo(email.getTo());
+        helper.setSubject(email.getSubject());
+        helper.setText(email.getBody(), true);
+        emailSender.send(mail);
     }
 }

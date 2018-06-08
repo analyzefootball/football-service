@@ -6,5 +6,5 @@ package football.analyze.common;
  */
 public interface EmailService {
 
-    void sendMail(Email email);
+    void sendMail(Email email) throws Exception;
 }
