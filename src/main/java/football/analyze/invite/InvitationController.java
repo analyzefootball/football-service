@@ -1,5 +1,6 @@
 package football.analyze.invite;
 
+import football.analyze.system.IsAdmin;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceSupport;
@@ -17,6 +18,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
  */
 @RestController
 @RequestMapping("/invitation")
+@IsAdmin
 public class InvitationController {
 
     private final InvitationService invitationService;
