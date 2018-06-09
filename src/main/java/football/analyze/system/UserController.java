@@ -7,6 +7,7 @@ import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
@@ -28,6 +29,7 @@ public class UserController {
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_UTF8_VALUE)
+    @IsAdmin
     public ResponseEntity getAllUsers() {
         Resources<User> resource = new Resources<>(userRepository.findAll());
         resource.add(linkTo(methodOn(UserController.class).getAllUsers()).withRel("self"));
@@ -35,6 +37,7 @@ public class UserController {
     }
 
     @GetMapping(value = "{username}", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_SYSTEM') or #username == authentication.name")
     public ResponseEntity getUser(@PathVariable String username) {
         Resource<User> resource = new Resource<>(userRepository.findByUsername(username));
         resource.add(linkTo(methodOn(UserController.class).getUser(username)).withRel("self"));
