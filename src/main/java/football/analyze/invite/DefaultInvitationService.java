@@ -2,6 +2,7 @@ package football.analyze.invite;
 
 import football.analyze.common.Email;
 import football.analyze.common.EmailService;
+import football.analyze.system.IsAdmin;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * @since 6/6/18
  */
 @Service
+@IsAdmin
 public class DefaultInvitationService implements InvitationService {
 
     private final InvitationRepository invitationRepository;
