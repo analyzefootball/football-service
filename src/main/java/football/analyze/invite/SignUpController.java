@@ -30,7 +30,7 @@ public class SignUpController {
     @PostMapping(value = "{inviteId}")
     public ResponseEntity createUser(@PathVariable String inviteId, @Valid @RequestBody User user) {
         try {
-            userService.signUpUser(inviteId, user);
+            user = userService.signUpUser(inviteId, user);
             ResourceSupport restUris = new ResourceSupport();
             restUris.add(linkTo(methodOn(UserController.class).getUser(user.getUsername())).withRel("self"));
             return new ResponseEntity<>(restUris, HttpStatus.CREATED);

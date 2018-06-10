@@ -1,7 +1,11 @@
 {
-  "displayName" : "Hassan Mushtaq",
-  "role" : "ADMIN",
-  "username" : "admin@analyze.football",
-  "password" : "{password_placeholder}",
-  "_class" : "football.analyze.system.User"
+  "displayName": "Hassan Mushtaq",
+  "role": "ADMIN",
+  "username": "admin@analyze.football",
+  "password": "{password_placeholder}",
+  "favoriteTeam": {
+    "name": "Brazil",
+    "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Brazil.png"
+  },
+  "_class": "football.analyze.system.User"
 }
