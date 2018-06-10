@@ -1,7 +1,6 @@
 package football.analyze.common;
 
 import com.github.mongobee.Mongobee;
-import com.github.mongobee.exception.MongobeeException;
 import com.mongodb.MongoClient;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
@@ -27,8 +26,8 @@ public class Migration {
     public void migrate() {
         try {
             mongobee.execute();
-        } catch (MongobeeException e) {
-            throw new RuntimeException();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }
