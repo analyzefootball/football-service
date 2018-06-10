@@ -13,14 +13,11 @@ public class Team {
 
     private String flagUrl;
 
-    private boolean placeHolder;
-
     private Team() {
     }
 
-    public Team(String name, String flagUrl, boolean placeHolder) {
+    public Team(String name, String flagUrl) {
         this.name = name;
         this.flagUrl = flagUrl;
-        this.placeHolder = placeHolder;
     }
 }

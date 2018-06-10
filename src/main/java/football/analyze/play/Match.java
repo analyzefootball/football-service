@@ -12,13 +12,17 @@ import java.time.LocalDateTime;
 @Getter
 public class Match {
 
+    @Setter
     private Team homeTeam;
 
+    @Setter
     private Team awayTeam;
 
     private LocalDateTime dateTime;
 
     private Integer matchNumber;
+
+    private MatchType matchType;
 
     @Setter
     private Integer homeTeamScore;
@@ -29,10 +33,11 @@ public class Match {
     private Match() {
     }
 
-    public Match(Team homeTeam, Team awayTeam, LocalDateTime dateTime, Integer matchNumber) {
+    public Match(Team homeTeam, Team awayTeam, LocalDateTime dateTime, Integer matchNumber, MatchType matchType) {
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
         this.dateTime = dateTime;
         this.matchNumber = matchNumber;
+        this.matchType = matchType;
     }
 }

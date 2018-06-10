@@ -1,5 +1,6 @@
 package football.analyze.play;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import football.analyze.common.Entity;
 import lombok.Getter;
 

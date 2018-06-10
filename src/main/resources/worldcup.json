@@ -320,7 +320,8 @@
         "dateTime": {
           "$date": "2018-06-14T15:00:00.000Z"
         },
-        "matchNumber": 1
+        "matchNumber": 1,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -334,7 +335,8 @@
         "dateTime": {
           "$date": "2018-06-15T12:00:00.000Z"
         },
-        "matchNumber": 2
+        "matchNumber": 2,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -348,7 +350,8 @@
         "dateTime": {
           "$date": "2018-06-15T15:00:00.000Z"
         },
-        "matchNumber": 3
+        "matchNumber": 3,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -362,7 +365,8 @@
         "dateTime": {
           "$date": "2018-06-15T18:00:00.000Z"
         },
-        "matchNumber": 4
+        "matchNumber": 4,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -376,7 +380,8 @@
         "dateTime": {
           "$date": "2018-06-16T10:00:00.000Z"
         },
-        "matchNumber": 5
+        "matchNumber": 5,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -390,7 +395,8 @@
         "dateTime": {
           "$date": "2018-06-16T13:00:00.000Z"
         },
-        "matchNumber": 6
+        "matchNumber": 6,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -404,7 +410,8 @@
         "dateTime": {
           "$date": "2018-06-16T16:00:00.000Z"
         },
-        "matchNumber": 7
+        "matchNumber": 7,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -418,7 +425,8 @@
         "dateTime": {
           "$date": "2018-06-16T19:00:00.000Z"
         },
-        "matchNumber": 8
+        "matchNumber": 8,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -432,7 +440,8 @@
         "dateTime": {
           "$date": "2018-06-17T12:00:00.000Z"
         },
-        "matchNumber": 9
+        "matchNumber": 9,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -446,7 +455,8 @@
         "dateTime": {
           "$date": "2018-06-17T15:00:00.000Z"
         },
-        "matchNumber": 10
+        "matchNumber": 10,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -460,7 +470,8 @@
         "dateTime": {
           "$date": "2018-06-17T18:00:00.000Z"
         },
-        "matchNumber": 11
+        "matchNumber": 11,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -474,7 +485,8 @@
         "dateTime": {
           "$date": "2018-06-18T12:00:00.000Z"
         },
-        "matchNumber": 12
+        "matchNumber": 12,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -488,7 +500,8 @@
         "dateTime": {
           "$date": "2018-06-18T15:00:00.000Z"
         },
-        "matchNumber": 13
+        "matchNumber": 13,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -502,7 +515,8 @@
         "dateTime": {
           "$date": "2018-06-18T18:00:00.000Z"
         },
-        "matchNumber": 14
+        "matchNumber": 14,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -516,7 +530,8 @@
         "dateTime": {
           "$date": "2018-06-19T12:00:00.000Z"
         },
-        "matchNumber": 15
+        "matchNumber": 15,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -530,7 +545,8 @@
         "dateTime": {
           "$date": "2018-06-19T15:00:00.000Z"
         },
-        "matchNumber": 16
+        "matchNumber": 16,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -544,7 +560,8 @@
         "dateTime": {
           "$date": "2018-06-19T18:00:00.000Z"
         },
-        "matchNumber": 17
+        "matchNumber": 17,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -558,7 +575,8 @@
         "dateTime": {
           "$date": "2018-06-20T12:00:00.000Z"
         },
-        "matchNumber": 18
+        "matchNumber": 18,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -572,7 +590,8 @@
         "dateTime": {
           "$date": "2018-06-20T15:00:00.000Z"
         },
-        "matchNumber": 19
+        "matchNumber": 19,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -586,7 +605,8 @@
         "dateTime": {
           "$date": "2018-06-20T18:00:00.000Z"
         },
-        "matchNumber": 20
+        "matchNumber": 20,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -600,7 +620,8 @@
         "dateTime": {
           "$date": "2018-06-21T12:00:00.000Z"
         },
-        "matchNumber": 21
+        "matchNumber": 21,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -614,7 +635,8 @@
         "dateTime": {
           "$date": "2018-06-21T15:00:00.000Z"
         },
-        "matchNumber": 22
+        "matchNumber": 22,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -628,7 +650,8 @@
         "dateTime": {
           "$date": "2018-06-21T18:00:00.000Z"
         },
-        "matchNumber": 23
+        "matchNumber": 23,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -642,7 +665,8 @@
         "dateTime": {
           "$date": "2018-06-22T12:00:00.000Z"
         },
-        "matchNumber": 24
+        "matchNumber": 24,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -656,7 +680,8 @@
         "dateTime": {
           "$date": "2018-06-22T15:00:00.000Z"
         },
-        "matchNumber": 25
+        "matchNumber": 25,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -670,7 +695,8 @@
         "dateTime": {
           "$date": "2018-06-22T18:00:00.000Z"
         },
-        "matchNumber": 26
+        "matchNumber": 26,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -684,7 +710,8 @@
         "dateTime": {
           "$date": "2018-06-23T12:00:00.000Z"
         },
-        "matchNumber": 27
+        "matchNumber": 27,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -698,7 +725,8 @@
         "dateTime": {
           "$date": "2018-06-23T15:00:00.000Z"
         },
-        "matchNumber": 28
+        "matchNumber": 28,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -712,7 +740,8 @@
         "dateTime": {
           "$date": "2018-06-23T18:00:00.000Z"
         },
-        "matchNumber": 29
+        "matchNumber": 29,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -726,7 +755,8 @@
         "dateTime": {
           "$date": "2018-06-24T12:00:00.000Z"
         },
-        "matchNumber": 30
+        "matchNumber": 30,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -740,7 +770,8 @@
         "dateTime": {
           "$date": "2018-06-24T15:00:00.000Z"
         },
-        "matchNumber": 31
+        "matchNumber": 31,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -754,7 +785,8 @@
         "dateTime": {
           "$date": "2018-06-24T18:00:00.000Z"
         },
-        "matchNumber": 32
+        "matchNumber": 32,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -768,7 +800,8 @@
         "dateTime": {
           "$date": "2018-06-25T14:00:00.000Z"
         },
-        "matchNumber": 33
+        "matchNumber": 33,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -782,7 +815,8 @@
         "dateTime": {
           "$date": "2018-06-25T14:00:00.000Z"
         },
-        "matchNumber": 34
+        "matchNumber": 34,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -796,7 +830,8 @@
         "dateTime": {
           "$date": "2018-06-25T18:00:00.000Z"
         },
-        "matchNumber": 35
+        "matchNumber": 35,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -810,7 +845,8 @@
         "dateTime": {
           "$date": "2018-06-25T18:00:00.000Z"
         },
-        "matchNumber": 36
+        "matchNumber": 36,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -824,7 +860,8 @@
         "dateTime": {
           "$date": "2018-06-26T14:00:00.000Z"
         },
-        "matchNumber": 37
+        "matchNumber": 37,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -838,7 +875,8 @@
         "dateTime": {
           "$date": "2018-06-26T14:00:00.000Z"
         },
-        "matchNumber": 38
+        "matchNumber": 38,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -852,7 +890,8 @@
         "dateTime": {
           "$date": "2018-06-26T18:00:00.000Z"
         },
-        "matchNumber": 39
+        "matchNumber": 39,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -866,7 +905,8 @@
         "dateTime": {
           "$date": "2018-06-26T18:00:00.000Z"
         },
-        "matchNumber": 40
+        "matchNumber": 40,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -880,7 +920,8 @@
         "dateTime": {
           "$date": "2018-06-27T14:00:00.000Z"
         },
-        "matchNumber": 41
+        "matchNumber": 41,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -894,7 +935,8 @@
         "dateTime": {
           "$date": "2018-06-27T14:00:00.000Z"
         },
-        "matchNumber": 42
+        "matchNumber": 42,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -908,7 +950,8 @@
         "dateTime": {
           "$date": "2018-06-27T18:00:00.000Z"
         },
-        "matchNumber": 43
+        "matchNumber": 43,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -922,7 +965,8 @@
         "dateTime": {
           "$date": "2018-06-27T18:00:00.000Z"
         },
-        "matchNumber": 44
+        "matchNumber": 44,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -936,7 +980,8 @@
         "dateTime": {
           "$date": "2018-06-28T14:00:00.000Z"
         },
-        "matchNumber": 45
+        "matchNumber": 45,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -950,7 +995,8 @@
         "dateTime": {
           "$date": "2018-06-28T14:00:00.000Z"
         },
-        "matchNumber": 46
+        "matchNumber": 46,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -964,7 +1010,8 @@
         "dateTime": {
           "$date": "2018-06-28T18:00:00.000Z"
         },
-        "matchNumber": 47
+        "matchNumber": 47,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
@@ -978,231 +1025,216 @@
         "dateTime": {
           "$date": "2018-06-28T18:00:00.000Z"
         },
-        "matchNumber": 48
+        "matchNumber": 48,
+        "matchType": "GROUP"
       },
       {
         "homeTeam": {
-          "name": "1A",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1A.png"
+          "name": "1A"
         },
         "awayTeam": {
-          "name": "2B",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2B.png"
+          "name": "2B"
         },
         "dateTime": {
           "$date": "2018-06-30T14:00:00.000Z"
         },
-        "matchNumber": 49
+        "matchNumber": 49,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "1C",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1C.png"
+          "name": "1C"
         },
         "awayTeam": {
-          "name": "2D",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2D.png"
+          "name": "2D"
         },
         "dateTime": {
           "$date": "2018-06-30T18:00:00.000Z"
         },
-        "matchNumber": 50
+        "matchNumber": 50,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "1B",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1B.png"
+          "name": "1B"
         },
         "awayTeam": {
-          "name": "2A",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2A.png"
+          "name": "2A"
         },
         "dateTime": {
           "$date": "2018-07-01T14:00:00.000Z"
         },
-        "matchNumber": 51
+        "matchNumber": 51,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "1D",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1D.png"
+          "name": "1D"
         },
         "awayTeam": {
-          "name": "2C",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2C.png"
+          "name": "2C"
         },
         "dateTime": {
           "$date": "2018-07-01T18:00:00.000Z"
         },
-        "matchNumber": 52
+        "matchNumber": 52,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "1E",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1E.png"
+          "name": "1E"
         },
         "awayTeam": {
-          "name": "2F",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2F.png"
+          "name": "2F"
         },
         "dateTime": {
           "$date": "2018-07-02T14:00:00.000Z"
         },
-        "matchNumber": 53
+        "matchNumber": 53,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "1G",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1G.png"
+          "name": "1G"
         },
         "awayTeam": {
-          "name": "2H",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2H.png"
+          "name": "2H"
         },
         "dateTime": {
           "$date": "2018-07-02T18:00:00.000Z"
         },
-        "matchNumber": 54
+        "matchNumber": 54,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "1F",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1F.png"
+          "name": "1F"
         },
         "awayTeam": {
-          "name": "2E",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2E.png"
+          "name": "2E"
         },
         "dateTime": {
           "$date": "2018-07-03T14:00:00.000Z"
         },
-        "matchNumber": 55
+        "matchNumber": 55,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "1H",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1H.png"
+          "name": "1H"
         },
         "awayTeam": {
-          "name": "2G",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2G.png"
+          "name": "2G"
         },
         "dateTime": {
           "$date": "2018-07-03T18:00:00.000Z"
         },
-        "matchNumber": 56
+        "matchNumber": 56,
+        "matchType": "ROUND16"
       },
       {
         "homeTeam": {
-          "name": "W49",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W49.png"
+          "name": "W49"
         },
         "awayTeam": {
-          "name": "W50",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W50.png"
+          "name": "W50"
         },
         "dateTime": {
           "$date": "2018-07-06T14:00:00.000Z"
         },
-        "matchNumber": 57
+        "matchNumber": 57,
+        "matchType": "QUARTERS"
       },
       {
         "homeTeam": {
-          "name": "W53",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W53.png"
+          "name": "W53"
         },
         "awayTeam": {
-          "name": "W54",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W54.png"
+          "name": "W54"
         },
         "dateTime": {
           "$date": "2018-07-06T18:00:00.000Z"
         },
-        "matchNumber": 58
+        "matchNumber": 58,
+        "matchType": "QUARTERS"
       },
       {
         "homeTeam": {
-          "name": "W51",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W51.png"
+          "name": "W51"
         },
         "awayTeam": {
-          "name": "W52",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W52.png"
+          "name": "W52"
         },
         "dateTime": {
           "$date": "2018-07-07T14:00:00.000Z"
         },
-        "matchNumber": 59
+        "matchNumber": 59,
+        "matchType": "QUARTERS"
       },
       {
         "homeTeam": {
-          "name": "W55",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W55.png"
+          "name": "W55"
         },
         "awayTeam": {
-          "name": "W56",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W56.png"
+          "name": "W56"
         },
         "dateTime": {
           "$date": "2018-07-07T18:00:00.000Z"
         },
-        "matchNumber": 60
+        "matchNumber": 60,
+        "matchType": "QUARTERS"
       },
       {
         "homeTeam": {
-          "name": "W57",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W57.png"
+          "name": "W57"
         },
         "awayTeam": {
-          "name": "W58",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W58.png"
+          "name": "W58"
         },
         "dateTime": {
           "$date": "2018-07-10T18:00:00.000Z"
         },
-        "matchNumber": 61
+        "matchNumber": 61,
+        "matchType": "SEMIS"
       },
       {
         "homeTeam": {
-          "name": "W59",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W59.png"
+          "name": "W59"
         },
         "awayTeam": {
-          "name": "W60",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W60.png"
+          "name": "W60"
         },
         "dateTime": {
           "$date": "2018-07-11T18:00:00.000Z"
         },
-        "matchNumber": 62
+        "matchNumber": 62,
+        "matchType": "SEMIS"
       },
       {
         "homeTeam": {
-          "name": "L61",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/L61.png"
+          "name": "L61"
         },
         "awayTeam": {
-          "name": "L62",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/L62.png"
+          "name": "L62"
         },
         "dateTime": {
           "$date": "2018-07-14T14:00:00.000Z"
         },
-        "matchNumber": 63
+        "matchNumber": 63,
+        "matchType": "THIRD"
       },
       {
         "homeTeam": {
-          "name": "W61",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W61.png"
+          "name": "W61"
         },
         "awayTeam": {
-          "name": "W62",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W62.png"
+          "name": "W62"
         },
         "dateTime": {
           "$date": "2018-07-15T15:00:00.000Z"
         },
-        "matchNumber": 64
+        "matchNumber": 64,
+        "matchType": "FINAL"
       }
     ]
   },
