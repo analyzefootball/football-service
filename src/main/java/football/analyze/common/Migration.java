@@ -2,7 +2,7 @@ package football.analyze.common;
 
 import com.github.mongobee.Mongobee;
 import com.github.mongobee.exception.MongobeeException;
-import org.springframework.beans.factory.annotation.Value;
+import com.mongodb.MongoClient;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
@@ -15,8 +15,9 @@ public class Migration {
 
     private final Mongobee mongobee;
 
-    public Migration(@Value("${spring.data.mongodb.uri}") String mongoURI, MongoTemplate mongoTemplate) {
-        mongobee = new Mongobee(mongoURI);
+    public Migration(MongoClient mongoClient, MongoTemplate mongoTemplate) {
+        mongobee = new Mongobee(mongoClient);
+        mongobee.setDbName(mongoTemplate.getDb().getName());
         mongobee.setChangeLogsScanPackage("football.analyze.common.scripts");
         mongobee.setMongoTemplate(mongoTemplate);
         mongobee.setChangelogCollectionName("migrationLog");

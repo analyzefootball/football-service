@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.mail.MessagingException;
@@ -28,7 +27,6 @@ import static org.junit.Assert.assertThat;
  * @since 6/7/18
  */
 @RunWith(SpringRunner.class)
-@ActiveProfiles("test")
 @SpringBootTest
 public class DefaultInvitationServiceTest {
 

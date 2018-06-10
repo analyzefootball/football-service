@@ -1,5 +1,6 @@
 package football.analyze.invite;
 
+import football.analyze.common.Migration;
 import football.analyze.system.Role;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,6 +38,9 @@ public class InvitationControllerTest {
 
     @MockBean
     private InvitationService invitationService;
+
+    @MockBean
+    private Migration migration;
 
     @Autowired
     private MockMvc mockMvc;

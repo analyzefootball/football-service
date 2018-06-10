@@ -19,6 +19,3 @@ spring:
     protocol: smtp
 jwt:
   secret: FWCB-BP3tI~THRm
-
-
-

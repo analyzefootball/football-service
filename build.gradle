@@ -27,6 +27,7 @@ dependencies {
             ['org.springframework.boot:spring-boot-starter-mail'],
             ['com.auth0:java-jwt:3.3.0'],
             ['org.slf4j:slf4j-api:1.7.25'],
+            ['org.apache.commons:commons-lang3:3.7'],
             ['com.github.mongobee:mongobee:0.13']
     )
     compileOnly(

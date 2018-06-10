@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
@@ -62,18 +63,14 @@ public class TournamentControllerTest {
 
     @Test
     public void testTournamentControllerMethods() throws Exception {
-        File file = ResourceUtils.getFile("classpath:fixtures/worldcup.json");
-        Tournament tournament = jacksonObjectMapper.readValue(file, Tournament.class);
-        tournamentRepository.save(tournament);
-
         MockHttpServletRequestBuilder request =
-                get("/tournaments/" + tournament.getId()).header("Authorization", "Bearer " + token);
+                get("/tournaments/").header("Authorization", "Bearer " + token);
 
         mockMvc.perform(request)
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaTypes.HAL_JSON_UTF8_VALUE))
-                .andExpect(jsonPath("$._links.self.href", is("http://localhost/tournaments/" + tournament.getId())))
-                .andExpect(jsonPath("$.name", is("Fifa 2018 World Cup")));
+                .andExpect(jsonPath("$._links.self[0].href", is("http://localhost/tournaments")))
+                .andExpect(jsonPath("$._embedded.tournamentList[0].name", is("Fifa 2018 World Cup")));
 
     }
 

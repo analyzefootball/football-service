@@ -4,7 +4,10 @@ import com.github.mongobee.changeset.ChangeLog;
 import com.github.mongobee.changeset.ChangeSet;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.bson.Document;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.util.ResourceUtils;
 
 import java.io.File;
@@ -16,6 +19,7 @@ import java.nio.file.Paths;
  * @author Hassan Mushtaq
  * @since 6/9/18
  */
+@Slf4j
 @ChangeLog(order = "001")
 public class InitialData {
 
@@ -41,6 +45,9 @@ public class InitialData {
     private String adminUserAsJSON() throws IOException {
         File file = ResourceUtils.getFile("classpath:adminuser.json");
         String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
-        return content.replace("{password", System.getenv("admin_password"));
+        String password = RandomStringUtils.random(8, true, true);
+        log.info("admin password: {}", password);
+        String encrypted = new BCryptPasswordEncoder().encode(password);
+        return content.replace("{password_placeholder}", encrypted);
     }
 }
