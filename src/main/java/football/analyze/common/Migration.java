@@ -19,6 +19,8 @@ public class Migration {
         mongobee = new Mongobee(mongoURI);
         mongobee.setChangeLogsScanPackage("football.analyze.common.scripts");
         mongobee.setMongoTemplate(mongoTemplate);
+        mongobee.setChangelogCollectionName("migrationLog");
+        mongobee.setLockCollectionName("migrationLock");
     }
 
     public void migrate() {

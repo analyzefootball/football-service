@@ -1,0 +1,7 @@
+{
+  "displayName" : "Hassan Mushtaq",
+  "role" : "ADMIN",
+  "username" : "admin@analyze.football",
+  "password" : "{password}",
+  "_class" : "football.analyze.system.User"
+}
