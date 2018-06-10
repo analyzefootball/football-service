@@ -74,11 +74,11 @@ public class TournamentControllerTest {
     public void getTournamentById() throws Exception {
         Tournament tournament = createTournament();
         MockHttpServletRequestBuilder request =
-                get("/tournaments/"+ tournament.getId()).header("Authorization", "Bearer " + token);
+                get("/tournaments/" + tournament.getId()).header("Authorization", "Bearer " + token);
         mockMvc.perform(request)
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaTypes.HAL_JSON_UTF8_VALUE))
-                .andExpect(jsonPath("$._links.self.href", is("http://localhost/tournaments/"+tournament.getId())))
+                .andExpect(jsonPath("$._links.self.href", is("http://localhost/tournaments/" + tournament.getId())))
                 .andExpect(jsonPath("$.name", is("Universe Cup")));
     }
 

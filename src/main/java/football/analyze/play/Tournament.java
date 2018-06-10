@@ -1,12 +1,10 @@
 package football.analyze.play;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import football.analyze.common.Entity;
 import lombok.Getter;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * @author Hassan Mushtaq
