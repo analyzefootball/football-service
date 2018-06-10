@@ -6,6 +6,7 @@ import lombok.Getter;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 /**
@@ -16,14 +17,13 @@ import java.time.LocalDateTime;
 @Document(collection = "invitation")
 public class Invitation extends Entity {
 
+    @NotBlank
     private String email;
 
     @Indexed(name = "deleteAt", expireAfterSeconds = 172800)
     private LocalDateTime createDate = LocalDateTime.now();
 
     private Role role;
-
-    private boolean accepted;
 
     //For jackson mapper
     private Invitation() {

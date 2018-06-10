@@ -51,6 +51,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .addHeaderWriter(new StaticHeadersWriter("Server", "Serving Football Analyze Application")).and()
                 .authorizeRequests().antMatchers("/actuator/**").permitAll()
                 .and()
+                .authorizeRequests().antMatchers("/signup/**").permitAll()
+                .and()
                 .authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .and()
                 .authorizeRequests().anyRequest().authenticated()

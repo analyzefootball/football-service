@@ -896,11 +896,11 @@
         "dateTime": "2018-06-30T18:00",
         "awayTeam": {
           "name": "2D",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2D.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "1C",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1C.png"
+          "placeHolder": true
         },
         "matchNumber": 50
       },
@@ -908,11 +908,11 @@
         "dateTime": "2018-07-01T14:00",
         "awayTeam": {
           "name": "2A",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2A.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "1B",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1B.png"
+          "placeHolder": true
         },
         "matchNumber": 51
       },
@@ -920,11 +920,11 @@
         "dateTime": "2018-07-01T18:00",
         "awayTeam": {
           "name": "2C",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2C.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "1D",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1D.png"
+          "placeHolder": true
         },
         "matchNumber": 52
       },
@@ -932,11 +932,11 @@
         "dateTime": "2018-07-02T14:00",
         "awayTeam": {
           "name": "2F",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2F.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "1E",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1E.png"
+          "placeHolder": true
         },
         "matchNumber": 53
       },
@@ -944,11 +944,11 @@
         "dateTime": "2018-07-02T18:00",
         "awayTeam": {
           "name": "2H",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2H.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "1G",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1G.png"
+          "placeHolder": true
         },
         "matchNumber": 54
       },
@@ -956,11 +956,11 @@
         "dateTime": "2018-07-03T14:00",
         "awayTeam": {
           "name": "2E",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2E.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "1F",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1F.png"
+          "placeHolder": true
         },
         "matchNumber": 55
       },
@@ -968,11 +968,11 @@
         "dateTime": "2018-07-03T18:00",
         "awayTeam": {
           "name": "2G",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/2G.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "1H",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/1H.png"
+          "placeHolder": true
         },
         "matchNumber": 56
       },
@@ -980,11 +980,11 @@
         "dateTime": "2018-07-06T14:00",
         "awayTeam": {
           "name": "W50",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W50.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "W49",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W49.png"
+          "placeHolder": true
         },
         "matchNumber": 57
       },
@@ -992,11 +992,11 @@
         "dateTime": "2018-07-06T18:00",
         "awayTeam": {
           "name": "W54",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W54.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "W53",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W53.png"
+          "placeHolder": true
         },
         "matchNumber": 58
       },
@@ -1004,11 +1004,11 @@
         "dateTime": "2018-07-07T14:00",
         "awayTeam": {
           "name": "W52",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W52.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "W51",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W51.png"
+          "placeHolder": true
         },
         "matchNumber": 59
       },
@@ -1016,11 +1016,11 @@
         "dateTime": "2018-07-07T18:00",
         "awayTeam": {
           "name": "W56",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W56.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "W55",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W55.png"
+          "placeHolder": true
         },
         "matchNumber": 60
       },
@@ -1028,11 +1028,11 @@
         "dateTime": "2018-07-10T18:00",
         "awayTeam": {
           "name": "W58",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W58.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "W57",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W57.png"
+          "placeHolder": true
         },
         "matchNumber": 61
       },
@@ -1040,11 +1040,11 @@
         "dateTime": "2018-07-11T18:00",
         "awayTeam": {
           "name": "W60",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W60.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "W59",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W59.png"
+          "placeHolder": true
         },
         "matchNumber": 62
       },
@@ -1052,11 +1052,11 @@
         "dateTime": "2018-07-14T14:00",
         "awayTeam": {
           "name": "L62",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/L62.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "L61",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/L61.png"
+          "placeHolder": true
         },
         "matchNumber": 63
       },
@@ -1064,11 +1064,11 @@
         "dateTime": "2018-07-15T15:00",
         "awayTeam": {
           "name": "W62",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W62.png"
+          "placeHolder": true
         },
         "homeTeam": {
           "name": "W61",
-          "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/W61.png"
+          "placeHolder": true
         },
         "matchNumber": 64
       }

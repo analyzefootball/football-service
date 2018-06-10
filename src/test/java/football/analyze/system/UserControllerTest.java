@@ -113,7 +113,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void shouldAllowRegularnUserToGetItself() throws Exception {
+    public void shouldAllowRegularUserToGetItself() throws Exception {
         User regularUser = createUser(Role.REGULAR);
         String token = login(regularUser.getUsername());
         MockHttpServletRequestBuilder request = get("/users/" + regularUser.getUsername()).header("Authorization", token);
@@ -138,7 +138,7 @@ public class UserControllerTest {
 
     private User createUser(Role role) {
         User user = new User(role.name(), role, UUID.randomUUID().toString(),
-                bCryptPasswordEncoder.encode("password"));
+                bCryptPasswordEncoder.encode("password"), null);
         userRepository.save(user);
         return user;
     }

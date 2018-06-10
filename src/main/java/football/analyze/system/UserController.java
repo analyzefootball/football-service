@@ -3,12 +3,14 @@ package football.analyze.system;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.Resource;
-import org.springframework.hateoas.ResourceSupport;
 import org.springframework.hateoas.Resources;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
@@ -42,12 +44,5 @@ public class UserController {
         Resource<User> resource = new Resource<>(userRepository.findByUsername(username));
         resource.add(linkTo(methodOn(UserController.class).getUser(username)).withRel("self"));
         return new ResponseEntity<>(resource, HttpStatus.OK);
-    }
-
-    @PostMapping
-    public ResponseEntity createUser(@RequestBody User user) {
-        ResourceSupport restUris = new ResourceSupport();
-        restUris.add(linkTo(methodOn(UserController.class).getUser(user.getUsername())).withRel("self"));
-        return new ResponseEntity<>(restUris, HttpStatus.CREATED);
     }
 }

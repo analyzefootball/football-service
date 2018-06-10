@@ -1,5 +1,7 @@
 package football.analyze;
 
+import football.analyze.common.Migration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +20,9 @@ import java.util.TimeZone;
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
+    @Autowired
+    private Migration migration;
+
     @PostConstruct
     void init() {
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
@@ -33,7 +38,8 @@ public class Application implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
+        migration.migrate();
 //        User user = new User("Hassan Mushtaq", football.analyze.system.Role.ADMIN,
 //                "hmushtaq@gmail.com", new BCryptPasswordEncoder().encode("Zaq!23wsx"));
 //        userRepository.save(user);

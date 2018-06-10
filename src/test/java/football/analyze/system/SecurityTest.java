@@ -73,7 +73,7 @@ public class SecurityTest {
 
     @Test
     public void shouldReturnSuccessAndHeaderWithSuccessfulLogin() throws Exception {
-        User adminUser = new User("admin user", Role.ADMIN, "admin@admin.com", bCryptPasswordEncoder.encode("password"));
+        User adminUser = new User("admin user", Role.ADMIN, "admin@admin.com", bCryptPasswordEncoder.encode("password"), null);
         userRepository.save(adminUser);
         MockHttpServletRequestBuilder request = post("/login")
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)

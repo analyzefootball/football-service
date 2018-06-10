@@ -26,7 +26,8 @@ dependencies {
             ['org.springframework.boot:spring-boot-starter-data-mongodb'],
             ['org.springframework.boot:spring-boot-starter-mail'],
             ['com.auth0:java-jwt:3.3.0'],
-            ['org.slf4j:slf4j-api:1.7.25']
+            ['org.slf4j:slf4j-api:1.7.25'],
+            ['com.github.mongobee:mongobee:0.13']
     )
     compileOnly(
             ['org.projectlombok:lombok']

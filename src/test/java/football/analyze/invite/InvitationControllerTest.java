@@ -69,7 +69,6 @@ public class InvitationControllerTest {
 
         assertTrue(result.getResponse().getContentAsString().contains("\"email\":\"anc@abc.com\""));
         assertTrue(result.getResponse().getContentAsString().contains("\"role\":\"REGULAR\""));
-        assertTrue(result.getResponse().getContentAsString().contains("\"accepted\":false"));
         assertTrue(result.getResponse().getContentAsString().contains("\"createDate\""));
     }
 
@@ -78,7 +77,7 @@ public class InvitationControllerTest {
         String id = "someid";
         Invitation invitation = new Invitation("anc@abc.com", Role.REGULAR);
         when(invitationService.findById(id)).thenReturn(invitation);
-        MockHttpServletRequestBuilder request = get("/invitation/"+id);
+        MockHttpServletRequestBuilder request = get("/invitation/" + id);
 
         MvcResult result = mockMvc.perform(request)
                 .andExpect(status().isOk())
@@ -87,7 +86,6 @@ public class InvitationControllerTest {
 
         assertTrue(result.getResponse().getContentAsString().contains("\"email\":\"anc@abc.com\""));
         assertTrue(result.getResponse().getContentAsString().contains("\"role\":\"REGULAR\""));
-        assertTrue(result.getResponse().getContentAsString().contains("\"accepted\":false"));
         assertTrue(result.getResponse().getContentAsString().contains("\"createDate\""));
     }
 
@@ -95,7 +93,7 @@ public class InvitationControllerTest {
     public void getInviteByIdShouldReturnNotFoundIfMissingInvitation() throws Exception {
         String id = "someid";
         when(invitationService.findById(id)).thenReturn(null);
-        MockHttpServletRequestBuilder request = get("/invitation/"+id);
+        MockHttpServletRequestBuilder request = get("/invitation/" + id);
 
         mockMvc.perform(request)
                 .andExpect(status().isNotFound());
