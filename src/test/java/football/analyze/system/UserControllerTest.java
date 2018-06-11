@@ -17,10 +17,13 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.util.UUID;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
@@ -103,7 +106,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void shouldNotAllowRegularUserToGetAnyUserByUsername() throws Exception {
+    public void shouldNotAllowRegularUserToGetAnyOtherUserByUsername() throws Exception {
         User adminUser = createUser(Role.ADMIN);
         User regularUser = createUser(Role.REGULAR);
         String token = login(regularUser.getUsername());
@@ -124,6 +127,66 @@ public class UserControllerTest {
                 .andReturn();
 
         assertTrue(result.getResponse().getContentAsString().contains("\"displayName\":\"REGULAR\""));
+    }
+
+    @Test
+    public void shouldNotAllowRegularUserToUpdateAnyOtherUserByUsername() throws Exception {
+        User adminUser = createUser(Role.ADMIN);
+        User regularUser = createUser(Role.REGULAR);
+        String token = login(regularUser.getUsername());
+        MockHttpServletRequestBuilder request = put("/users/" + adminUser.getUsername())
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content("{ \"password\" : \"password\"}");
+        mockMvc.perform(request)
+                .andExpect(status().isForbidden());
+    }
+
+    @Test
+    public void shouldAllowRegularUserToUpdateItself() throws Exception {
+        User regularUser = createUser(Role.REGULAR);
+        String token = login(regularUser.getUsername());
+        MockHttpServletRequestBuilder request = put("/users/" + regularUser.getUsername())
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content("{ \"displayName\" : \"new display name\"}");
+
+        mockMvc.perform(request)
+                .andExpect(status().isOk());
+
+        User user = userRepository.findByUsername(regularUser.getUsername());
+
+        assertThat(user.getDisplayName(), is("new display name"));
+    }
+
+    @Test
+    public void shoulAllowAdminUserToUpdateAnyOtherUserByUsername() throws Exception {
+        User adminUser = createUser(Role.ADMIN);
+        User regularUser = createUser(Role.REGULAR);
+        String token = login(adminUser.getUsername());
+        MockHttpServletRequestBuilder request = put("/users/" + regularUser.getUsername())
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content("{ \"displayName\" : \"new display name\"}");
+        mockMvc.perform(request)
+                .andExpect(status().isOk());
+
+        User user = userRepository.findByUsername(regularUser.getUsername());
+
+        assertThat(user.getDisplayName(), is("new display name"));
+    }
+
+    @Test
+    public void shouldHandleBadRequest() throws Exception {
+        User adminUser = createUser(Role.ADMIN);
+        String token = login(adminUser.getUsername());
+        MockHttpServletRequestBuilder request = put("/users/" + "non-existent-user")
+                .header("Authorization", token)
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content("{ \"displayName\" : \"new display name\"}");
+
+        mockMvc.perform(request)
+                .andExpect(status().isBadRequest());
     }
 
     private String createAndLoginRegularUser() throws Exception {

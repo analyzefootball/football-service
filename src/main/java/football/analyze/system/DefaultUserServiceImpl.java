@@ -5,6 +5,8 @@ import football.analyze.invite.InvitationRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author Hassan Mushtaq
  * @since 6/9/18
@@ -35,5 +37,25 @@ public class DefaultUserServiceImpl implements UserService {
         userRepository.save(user);
         invitationRepository.delete(invitation);
         return user;
+    }
+
+    @Override
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    @Override
+    public void updateUser(String username, User user) {
+        User existingUser = userRepository.findByUsername(username);
+        if (existingUser == null) {
+            throw new IllegalArgumentException();
+        }
+        existingUser.update(user, bCryptPasswordEncoder);
+        userRepository.save(existingUser);
     }
 }

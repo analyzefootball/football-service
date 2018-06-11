@@ -17,7 +17,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
  * @since 6/6/18
  */
 @RestController
-@RequestMapping("/invitation")
+@RequestMapping("/invitations")
 @IsAdmin
 public class InvitationController {
 

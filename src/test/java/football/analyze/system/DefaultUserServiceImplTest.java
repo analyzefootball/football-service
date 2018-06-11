@@ -2,14 +2,20 @@ package football.analyze.system;
 
 import football.analyze.invite.Invitation;
 import football.analyze.invite.InvitationRepository;
+import football.analyze.play.Team;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 import static org.mockito.Mockito.*;
 
 /**
@@ -72,5 +78,47 @@ public class DefaultUserServiceImplTest {
         userService.signUpUser("123", user);
         verify(userRepository).save(user);
         verify(invitationRepository).delete(invitation);
+    }
+
+    @Test
+    public void getAll() {
+        final User user1 = new User("display name", Role.REGULAR, "username", "password", null);
+        final User user2 = new User("display name2", Role.REGULAR, "username2", "password2", null);
+        List<User> allUsers = Arrays.asList(user1, user2);
+        when(userRepository.findAll()).thenReturn(allUsers);
+        List<User> serviceUsers = userService.findAll();
+        assertThat(serviceUsers, containsInAnyOrder(user1, user2));
+    }
+
+    @Test
+    public void getByUserName() {
+        final User user1 = new User("display name", Role.REGULAR, "username", "password", null);
+        when(userRepository.findByUsername("username")).thenReturn(user1);
+        User serviceUser = userService.findByUsername("username");
+        assertThat(serviceUser, is(user1));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void updateUserShouldThrowExceptionIfUsernameNotFound() {
+        final User user1 = new User("display name", Role.REGULAR, "username", "password", null);
+        when(userRepository.findByUsername("abcd")).thenReturn(null);
+        userService.updateUser("abcd", user1);
+    }
+
+    @Test
+    public void updateUserShouldUpdateGivenFields() {
+        final User original = new User("display name", Role.REGULAR, "username", "password", null);
+        when(userRepository.findByUsername("username")).thenReturn(original);
+        final Team team1 = new Team("abcd", "qpr");
+        final User updatedUser = new User("new name", Role.ADMIN, null, "password2", team1);
+        userService.updateUser("username", updatedUser);
+        ArgumentCaptor<User> argumentCaptor = ArgumentCaptor.forClass(User.class);
+        verify(userRepository).save(argumentCaptor.capture());
+        assertThat(argumentCaptor.getValue().getUsername(), equalTo("username"));
+        assertThat(argumentCaptor.getValue().getPassword(), equalTo(original.getPassword()));
+        assertThat(argumentCaptor.getValue().getPassword(), not("password"));
+        assertThat(argumentCaptor.getValue().getRole(), equalTo(Role.ADMIN));
+        assertThat(argumentCaptor.getValue().getDisplayName(), equalTo("new name"));
+        assertThat(argumentCaptor.getValue().getFavoriteTeam(), equalTo(team1));
     }
 }

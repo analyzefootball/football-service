@@ -49,7 +49,22 @@ public class User extends Entity {
         return role.equals(Role.ADMIN);
     }
 
-    public void encodePassword(BCryptPasswordEncoder encoder) {
+    void encodePassword(BCryptPasswordEncoder encoder) {
         encoder.encode(this.password);
+    }
+
+    void update(User user, BCryptPasswordEncoder encoder) {
+        if (user.getPassword() != null) {
+            this.password = encoder.encode(user.getPassword());
+        }
+        if (user.getRole() != null) {
+            this.role = user.getRole();
+        }
+        if (user.getDisplayName() != null) {
+            this.displayName = user.getDisplayName();
+        }
+        if (user.getFavoriteTeam() != null) {
+            this.favoriteTeam = user.getFavoriteTeam();
+        }
     }
 }

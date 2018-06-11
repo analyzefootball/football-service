@@ -48,15 +48,15 @@ public class InvitationControllerTest {
 
     @Test
     public void sendInviteShouldSaveInviteAndSendEmail() throws Exception {
-        MockHttpServletRequestBuilder request = post("/invitation")
+        MockHttpServletRequestBuilder request = post("/invitations")
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                 .content("{\"email\" : \"something@something.com\", \"role\" : \"REGULAR\"}");
 
         mockMvc.perform(request)
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$._links.self.href", startsWith("http://localhost/invitation")));
+                .andExpect(jsonPath("$._links.self.href", startsWith("http://localhost/invitations")));
 
-        Mockito.verify(invitationService).sendInvite(Mockito.any(Invitation.class), eq("http://localhost/invitation/{inviteId}"));
+        Mockito.verify(invitationService).sendInvite(Mockito.any(Invitation.class), eq("http://localhost/invitations/{inviteId}"));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class InvitationControllerTest {
         Invitation invitation1 = new Invitation("anc@abc.com", Role.REGULAR);
         List<Invitation> invitations = Arrays.asList(invitation1);
         when(invitationService.findAll()).thenReturn(invitations);
-        MockHttpServletRequestBuilder request = get("/invitation");
+        MockHttpServletRequestBuilder request = get("/invitations");
 
         MvcResult result = mockMvc.perform(request)
                 .andExpect(status().isOk())
@@ -81,7 +81,7 @@ public class InvitationControllerTest {
         String id = "someid";
         Invitation invitation = new Invitation("anc@abc.com", Role.REGULAR);
         when(invitationService.findById(id)).thenReturn(invitation);
-        MockHttpServletRequestBuilder request = get("/invitation/" + id);
+        MockHttpServletRequestBuilder request = get("/invitations/" + id);
 
         MvcResult result = mockMvc.perform(request)
                 .andExpect(status().isOk())
@@ -97,7 +97,7 @@ public class InvitationControllerTest {
     public void getInviteByIdShouldReturnNotFoundIfMissingInvitation() throws Exception {
         String id = "someid";
         when(invitationService.findById(id)).thenReturn(null);
-        MockHttpServletRequestBuilder request = get("/invitation/" + id);
+        MockHttpServletRequestBuilder request = get("/invitations/" + id);
 
         mockMvc.perform(request)
                 .andExpect(status().isNotFound());
