@@ -28,6 +28,7 @@ dependencies {
             ['com.auth0:java-jwt:3.3.0'],
             ['org.slf4j:slf4j-api:1.7.25'],
             ['org.apache.commons:commons-lang3:3.7'],
+            ['commons-io:commons-io:2.6'],
             ['com.github.mongobee:mongobee:0.13']
     )
     compileOnly(

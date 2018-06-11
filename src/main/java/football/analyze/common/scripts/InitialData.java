@@ -5,15 +5,12 @@ import com.github.mongobee.changeset.ChangeSet;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.bson.Document;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.util.ResourceUtils;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 /**
  * @author Hassan Mushtaq
@@ -38,13 +35,11 @@ public class InitialData {
     }
 
     private String tournamentAsJSON() throws IOException {
-        File file = ResourceUtils.getFile("classpath:worldcup.json");
-        return new String(Files.readAllBytes(Paths.get(file.toURI())));
+        return IOUtils.toString(ClassLoader.getSystemResourceAsStream("worldcup.json"), "UTF-8");
     }
 
     private String adminUserAsJSON() throws IOException {
-        File file = ResourceUtils.getFile("classpath:adminuser.json");
-        String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
+        String content = IOUtils.toString(ClassLoader.getSystemResourceAsStream("adminuser.json"), "UTF-8");
         String password = RandomStringUtils.random(8, true, true);
         log.info("admin password: {}", password);
         String encrypted = new BCryptPasswordEncoder().encode(password);
