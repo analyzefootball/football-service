@@ -35,11 +35,11 @@ public class InitialData {
     }
 
     private String tournamentAsJSON() throws IOException {
-        return IOUtils.toString(ClassLoader.getSystemResourceAsStream("worldcup.json"), "UTF-8");
+        return IOUtils.toString(getClass().getResourceAsStream("/worldcup.json"), "UTF-8");
     }
 
     private String adminUserAsJSON() throws IOException {
-        String content = IOUtils.toString(ClassLoader.getSystemResourceAsStream("adminuser.json"), "UTF-8");
+        String content = IOUtils.toString(getClass().getResourceAsStream("/adminuser.json"), "UTF-8");
         String password = RandomStringUtils.random(8, true, true);
         log.info("admin password: {}", password);
         String encrypted = new BCryptPasswordEncoder().encode(password);
