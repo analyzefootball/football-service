@@ -35,10 +35,10 @@ public class TournamentController {
         return new ResponseEntity<>(resource, HttpStatus.OK);
     }
 
-    @GetMapping(value = "{tournamentId}", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
-    public ResponseEntity getTournament(@PathVariable String tournamentId) {
-        Resource<Tournament> resource = new Resource<>(tournamentRepository.findById(tournamentId).get());
-        resource.add(linkTo(methodOn(TournamentController.class).getTournament(tournamentId)).withRel("self"));
+    @GetMapping(value = "{tournamentName}", produces = MediaTypes.HAL_JSON_UTF8_VALUE)
+    public ResponseEntity getTournament(@PathVariable String tournamentName) {
+        Resource<Tournament> resource = new Resource<>(tournamentRepository.findByName(tournamentName));
+        resource.add(linkTo(methodOn(TournamentController.class).getTournament(tournamentName)).withRel("self"));
         return new ResponseEntity<>(resource, HttpStatus.OK);
     }
 }

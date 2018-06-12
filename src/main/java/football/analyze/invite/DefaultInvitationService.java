@@ -2,6 +2,7 @@ package football.analyze.invite;
 
 import football.analyze.common.Email;
 import football.analyze.common.EmailService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,17 +18,21 @@ public class DefaultInvitationService implements InvitationService {
 
     private final EmailService emailService;
 
+    private final String link;
+
     private final static String FROM = "admin@analyze.football";
 
     private final static String SUBJECT = "Invitation to join Analyze Football";
 
-    public DefaultInvitationService(InvitationRepository invitationRepository, EmailService emailService) {
+    public DefaultInvitationService(InvitationRepository invitationRepository, EmailService emailService,
+                                    @Value("${signup.link}") String link) {
         this.invitationRepository = invitationRepository;
         this.emailService = emailService;
+        this.link = link;
     }
 
     @Override
-    public void sendInvite(Invitation invitation, String link) {
+    public void sendInvite(Invitation invitation) {
         try {
             Invitation existing = invitationRepository.findByEmail(invitation.getEmail());
             if (existing != null) {

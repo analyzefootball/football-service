@@ -26,3 +26,5 @@ spring:
             required: true
 jwt:
   secret : ${JWT_SECRET}
+signup:
+  link: ${UI_URL}/{inviteId}

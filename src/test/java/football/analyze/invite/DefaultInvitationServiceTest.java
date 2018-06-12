@@ -49,10 +49,9 @@ public class DefaultInvitationServiceTest {
     public void sendInviteShouldSendEmailAndCreateRecordInDb() throws MessagingException {
         GreenMail smtpServer = new GreenMail(new ServerSetup(mailPort, null, "smtp"));
         smtpServer.start();
-        String link = "http://anyurl/{inviteId}";
         Invitation invitation = new Invitation("fake@fakemail.com", Role.ADMIN);
 
-        invitationService.sendInvite(invitation, link);
+        invitationService.sendInvite(invitation);
 
         //testing email part
         MimeMessage[] receivedMessages = smtpServer.getReceivedMessages();

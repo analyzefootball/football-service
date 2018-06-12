@@ -71,19 +71,19 @@ public class TournamentControllerTest {
     }
 
     @Test
-    public void getTournamentById() throws Exception {
+    public void getTournamentByName() throws Exception {
         Tournament tournament = createTournament();
         MockHttpServletRequestBuilder request =
-                get("/tournaments/" + tournament.getId()).header("Authorization", "Bearer " + token);
+                get("/tournaments/" + tournament.getName()).header("Authorization", "Bearer " + token);
         mockMvc.perform(request)
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaTypes.HAL_JSON_UTF8_VALUE))
-                .andExpect(jsonPath("$._links.self.href", is("http://localhost/tournaments/" + tournament.getId())))
-                .andExpect(jsonPath("$.name", is("Universe Cup")));
+                .andExpect(jsonPath("$._links.self.href", is("http://localhost/tournaments/" + tournament.getName())))
+                .andExpect(jsonPath("$.name", is("UniverseCup")));
     }
 
     private Tournament createTournament() {
-        String name = "Universe Cup";
+        String name = "UniverseCup";
         LocalDate startDate = LocalDate.of(2020, 6, 15);
         LocalDate endDate = LocalDate.of(2020, 7, 14);
 

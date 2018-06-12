@@ -56,7 +56,7 @@ public class InvitationControllerTest {
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$._links.self.href", startsWith("http://localhost/invitations")));
 
-        Mockito.verify(invitationService).sendInvite(Mockito.any(Invitation.class), eq("http://localhost/invitations/{inviteId}"));
+        Mockito.verify(invitationService).sendInvite(Mockito.any(Invitation.class));
     }
 
     @Test

@@ -8,7 +8,7 @@ import java.util.List;
  */
 public interface InvitationService {
 
-    void sendInvite(Invitation invitation, String link);
+    void sendInvite(Invitation invitation);
 
     List<Invitation> findAll();
 
