@@ -18,7 +18,6 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
  */
 @RestController
 @RequestMapping("/invitations")
-@IsAdmin
 public class InvitationController {
 
     private final InvitationService invitationService;
@@ -28,6 +27,7 @@ public class InvitationController {
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_UTF8_VALUE)
+    @IsAdmin
     public ResponseEntity getAllInvitations() {
         Resources<Invitation> resource = new Resources<>(invitationService.findAll());
         resource.add(linkTo(methodOn(InvitationController.class).getAllInvitations()).withRel("self"));
@@ -47,6 +47,7 @@ public class InvitationController {
     }
 
     @PostMapping
+    @IsAdmin
     public ResponseEntity sendInvite(@RequestBody Invitation invitation) {
         invitationService.sendInvite(invitation);
         ResourceSupport restUris = new ResourceSupport();
