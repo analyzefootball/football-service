@@ -27,4 +27,4 @@ spring:
 jwt:
   secret : ${JWT_SECRET}
 signup:
-  link: ${UI_URL}/{inviteId}
+  link: ${SIGNUP_UI_URL}

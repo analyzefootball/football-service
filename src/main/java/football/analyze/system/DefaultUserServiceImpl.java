@@ -33,6 +33,10 @@ public class DefaultUserServiceImpl implements UserService {
                 || !invitation.getEmail().equals(user.getUsername()) || !invitation.getRole().equals(user.getRole())) {
             throw new IllegalArgumentException();
         }
+        User existing = userRepository.findByUsername(user.getUsername());
+        if (existing!=null) {
+            throw new IllegalArgumentException();
+        }
         user.encodePassword(bCryptPasswordEncoder);
         userRepository.save(user);
         invitationRepository.delete(invitation);

@@ -57,7 +57,7 @@ public class User extends Entity {
     }
 
     void encodePassword(BCryptPasswordEncoder encoder) {
-        encoder.encode(this.password);
+        this.password = encoder.encode(this.password);
     }
 
     void update(User user, BCryptPasswordEncoder encoder) {

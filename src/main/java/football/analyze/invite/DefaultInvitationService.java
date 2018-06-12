@@ -39,7 +39,7 @@ public class DefaultInvitationService implements InvitationService {
                 invitationRepository.delete(existing);
             }
             invitationRepository.save(invitation);
-            String correctLink = link.replace("{inviteId}", invitation.getId());
+            String correctLink = link + invitation.getId();
             String body = "Please click following link to complete sign-up<br/><br/>" + correctLink;
             Email email = new Email(FROM, invitation.getEmail(), body, SUBJECT);
             emailService.sendMail(email);
