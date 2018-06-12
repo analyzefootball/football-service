@@ -10,8 +10,6 @@ spring:
   data:
     mongodb:
       uri: ${DB_URL}
-  jackson:
-    default-property-inclusion: non_null
   mail:
     host: email-smtp.us-west-2.amazonaws.com
     username: ${smtp_user}
