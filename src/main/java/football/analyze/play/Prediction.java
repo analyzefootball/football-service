@@ -11,7 +11,10 @@ import java.time.LocalDateTime;
 public class Prediction {
 
     @Getter
-    private final Match match;
+    private Match match;
+
+    private Prediction() {
+    }
 
     public Prediction(Match match) {
         this.match = match;

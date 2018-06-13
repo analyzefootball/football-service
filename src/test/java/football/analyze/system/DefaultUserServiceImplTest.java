@@ -2,7 +2,10 @@ package football.analyze.system;
 
 import football.analyze.invite.Invitation;
 import football.analyze.invite.InvitationRepository;
+import football.analyze.play.Schedule;
 import football.analyze.play.Team;
+import football.analyze.play.Tournament;
+import football.analyze.play.TournamentRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +14,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +33,8 @@ public class DefaultUserServiceImplTest {
 
     private UserRepository userRepository;
 
+    private TournamentRepository tournamentRepository;
+
     private final BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
     private DefaultUserServiceImpl userService;
@@ -37,7 +43,8 @@ public class DefaultUserServiceImplTest {
     public void setup() {
         invitationRepository = mock(InvitationRepository.class);
         userRepository = mock(UserRepository.class);
-        userService = new DefaultUserServiceImpl(invitationRepository, userRepository, bCryptPasswordEncoder);
+        tournamentRepository = mock(TournamentRepository.class);
+        userService = new DefaultUserServiceImpl(invitationRepository, userRepository, bCryptPasswordEncoder, tournamentRepository);
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -74,7 +81,12 @@ public class DefaultUserServiceImplTest {
     public void successFlow() {
         final User user = new User("display name", Role.REGULAR, "username", "password", null);
         Invitation invitation = new Invitation("username", Role.REGULAR);
+        Tournament tournament = mock(Tournament.class);
+        Schedule schedule = mock(Schedule.class);
+        when(tournament.getSchedule()).thenReturn(schedule);
+        when(schedule.getMatches()).thenReturn(Collections.emptyList());
         when(invitationRepository.findById("123")).thenReturn(Optional.of(invitation));
+        when(tournamentRepository.findByName("Fifa 2018 World Cup")).thenReturn(tournament);
         userService.signUpUser("123", user);
         verify(userRepository).save(user);
         verify(invitationRepository).delete(invitation);

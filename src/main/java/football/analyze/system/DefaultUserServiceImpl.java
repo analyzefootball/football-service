@@ -2,10 +2,16 @@ package football.analyze.system;
 
 import football.analyze.invite.Invitation;
 import football.analyze.invite.InvitationRepository;
+import football.analyze.play.Match;
+import football.analyze.play.MatchType;
+import football.analyze.play.Tournament;
+import football.analyze.play.TournamentRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * @author Hassan Mushtaq
@@ -20,10 +26,14 @@ public class DefaultUserServiceImpl implements UserService {
 
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public DefaultUserServiceImpl(InvitationRepository invitationRepository, UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    private final TournamentRepository tournamentRepository;
+
+    public DefaultUserServiceImpl(InvitationRepository invitationRepository, UserRepository userRepository,
+                                  BCryptPasswordEncoder bCryptPasswordEncoder, TournamentRepository tournamentRepository) {
         this.invitationRepository = invitationRepository;
         this.userRepository = userRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.tournamentRepository = tournamentRepository;
     }
 
     @Override
@@ -34,10 +44,13 @@ public class DefaultUserServiceImpl implements UserService {
             throw new IllegalArgumentException();
         }
         User existing = userRepository.findByUsername(user.getUsername());
-        if (existing!=null) {
+        if (existing != null) {
             throw new IllegalArgumentException();
         }
         user.encodePassword(bCryptPasswordEncoder);
+        Tournament tournament = tournamentRepository.findByName("Fifa 2018 World Cup");
+        user.initializePredictions(tournament.getSchedule().getMatches().stream().filter
+                (match -> match.getMatchType().equals(MatchType.GROUP)).collect(Collectors.toList()));
         userRepository.save(user);
         invitationRepository.delete(invitation);
         return user;

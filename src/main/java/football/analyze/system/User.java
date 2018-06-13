@@ -37,7 +37,7 @@ public class User extends Entity {
 
     private Team favoriteTeam;
 
-    //private final List<Prediction> predictions = new ArrayList<>(64);
+    private List<Prediction> predictions = new ArrayList<>(48);
 
     //For jackson mapper
     private User() {
@@ -75,22 +75,25 @@ public class User extends Entity {
         }
     }
 
-//    public void initializePredictions(List<Match> matches) {
-//        this.predictions.addAll(matches.stream().map(Prediction::new).collect(Collectors.toList()));
-//    }
-//
-//    void predict(Match match, Integer homeTeamScore, Integer awayTeamScore) {
-//        if (match == null) {
-//            throw new IllegalArgumentException();
-//        }
-//        Prediction existing = predictions.stream()
-//                .filter(prediction -> prediction.getMatch().getMatchNumber().equals(match.getMatchNumber()))
-//                .findFirst().orElse(null);
-//        if (existing == null) {
-//            existing = new Prediction(match);
-//            predictions.add(existing);
-//        }
-//        existing.predictHomeTeamScore(homeTeamScore);
-//        existing.predictAwayTeamScore(awayTeamScore);
-//    }
+    public void initializePredictions(List<Match> matches) {
+        if (predictions == null) {
+            predictions =new ArrayList<>(48);
+        }
+        this.predictions.addAll(matches.stream().map(Prediction::new).collect(Collectors.toList()));
+    }
+
+    void predict(Match match, Integer homeTeamScore, Integer awayTeamScore) {
+        if (match == null) {
+            throw new IllegalArgumentException();
+        }
+        Prediction existing = predictions.stream()
+                .filter(prediction -> prediction.getMatch().getMatchNumber().equals(match.getMatchNumber()))
+                .findFirst().orElse(null);
+        if (existing == null) {
+            existing = new Prediction(match);
+            predictions.add(existing);
+        }
+        existing.predictHomeTeamScore(homeTeamScore);
+        existing.predictAwayTeamScore(awayTeamScore);
+    }
 }

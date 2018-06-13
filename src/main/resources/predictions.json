@@ -10,11 +10,11 @@
           "name": "Saudi Arabia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Saudi_Arabia.png"
         },
-        "dateTime": "2018-06-14T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-14T15:00:00.000Z"
+        },
         "matchNumber": 1,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -27,11 +27,11 @@
           "name": "Uruguay",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Uruguay.png"
         },
-        "dateTime": "2018-06-15T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-15T12:00:00.000Z"
+        },
         "matchNumber": 2,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -44,11 +44,11 @@
           "name": "Iran",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iran.png"
         },
-        "dateTime": "2018-06-15T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-15T15:00:00.000Z"
+        },
         "matchNumber": 3,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -61,11 +61,11 @@
           "name": "Spain",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Spain.png"
         },
-        "dateTime": "2018-06-15T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-15T18:00:00.000Z"
+        },
         "matchNumber": 4,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -78,11 +78,11 @@
           "name": "Australia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Australia.png"
         },
-        "dateTime": "2018-06-16T10:00:00",
+        "dateTime": {
+          "$date": "2018-06-16T10:00:00.000Z"
+        },
         "matchNumber": 5,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -95,11 +95,11 @@
           "name": "Iceland",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iceland.png"
         },
-        "dateTime": "2018-06-16T13:00:00",
+        "dateTime": {
+          "$date": "2018-06-16T13:00:00.000Z"
+        },
         "matchNumber": 6,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -112,11 +112,11 @@
           "name": "Denmark",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Denmark.png"
         },
-        "dateTime": "2018-06-16T16:00:00",
+        "dateTime": {
+          "$date": "2018-06-16T16:00:00.000Z"
+        },
         "matchNumber": 7,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -129,11 +129,11 @@
           "name": "Nigeria",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Nigeria.png"
         },
-        "dateTime": "2018-06-16T19:00:00",
+        "dateTime": {
+          "$date": "2018-06-16T19:00:00.000Z"
+        },
         "matchNumber": 8,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -146,11 +146,11 @@
           "name": "Serbia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Serbia.png"
         },
-        "dateTime": "2018-06-17T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-17T12:00:00.000Z"
+        },
         "matchNumber": 9,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -163,11 +163,11 @@
           "name": "Mexico",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Mexico.png"
         },
-        "dateTime": "2018-06-17T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-17T15:00:00.000Z"
+        },
         "matchNumber": 10,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -180,11 +180,11 @@
           "name": "Switzerland",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Switzerland.png"
         },
-        "dateTime": "2018-06-17T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-17T18:00:00.000Z"
+        },
         "matchNumber": 11,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -197,11 +197,11 @@
           "name": "South Korea",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/South_Korea.png"
         },
-        "dateTime": "2018-06-18T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-18T12:00:00.000Z"
+        },
         "matchNumber": 12,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -214,11 +214,11 @@
           "name": "Panama",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Panama.png"
         },
-        "dateTime": "2018-06-18T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-18T15:00:00.000Z"
+        },
         "matchNumber": 13,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -231,11 +231,11 @@
           "name": "England",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/England.png"
         },
-        "dateTime": "2018-06-18T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-18T18:00:00.000Z"
+        },
         "matchNumber": 14,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -248,11 +248,11 @@
           "name": "Japan",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Japan.png"
         },
-        "dateTime": "2018-06-19T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-19T12:00:00.000Z"
+        },
         "matchNumber": 15,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -265,11 +265,11 @@
           "name": "Senegal",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Senegal.png"
         },
-        "dateTime": "2018-06-19T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-19T15:00:00.000Z"
+        },
         "matchNumber": 16,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -282,11 +282,11 @@
           "name": "Egypt",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Egypt.png"
         },
-        "dateTime": "2018-06-19T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-19T18:00:00.000Z"
+        },
         "matchNumber": 17,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -299,11 +299,11 @@
           "name": "Morocco",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Morocco.png"
         },
-        "dateTime": "2018-06-20T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-20T12:00:00.000Z"
+        },
         "matchNumber": 18,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -316,11 +316,11 @@
           "name": "Saudi Arabia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Saudi_Arabia.png"
         },
-        "dateTime": "2018-06-20T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-20T15:00:00.000Z"
+        },
         "matchNumber": 19,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -333,11 +333,11 @@
           "name": "Spain",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Spain.png"
         },
-        "dateTime": "2018-06-20T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-20T18:00:00.000Z"
+        },
         "matchNumber": 20,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -350,11 +350,11 @@
           "name": "Australia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Australia.png"
         },
-        "dateTime": "2018-06-21T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-21T12:00:00.000Z"
+        },
         "matchNumber": 21,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -367,11 +367,11 @@
           "name": "Peru",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Peru.png"
         },
-        "dateTime": "2018-06-21T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-21T15:00:00.000Z"
+        },
         "matchNumber": 22,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -384,11 +384,11 @@
           "name": "Croatia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Croatia.png"
         },
-        "dateTime": "2018-06-21T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-21T18:00:00.000Z"
+        },
         "matchNumber": 23,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -401,11 +401,11 @@
           "name": "Costa Rica",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Costa_Rica.png"
         },
-        "dateTime": "2018-06-22T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-22T12:00:00.000Z"
+        },
         "matchNumber": 24,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -418,11 +418,11 @@
           "name": "Iceland",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Iceland.png"
         },
-        "dateTime": "2018-06-22T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-22T15:00:00.000Z"
+        },
         "matchNumber": 25,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -435,11 +435,11 @@
           "name": "Switzerland",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Switzerland.png"
         },
-        "dateTime": "2018-06-22T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-22T18:00:00.000Z"
+        },
         "matchNumber": 26,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -452,11 +452,11 @@
           "name": "Tunisia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Tunisia.png"
         },
-        "dateTime": "2018-06-23T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-23T12:00:00.000Z"
+        },
         "matchNumber": 27,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -469,11 +469,11 @@
           "name": "Mexico",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Mexico.png"
         },
-        "dateTime": "2018-06-23T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-23T15:00:00.000Z"
+        },
         "matchNumber": 28,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -486,11 +486,11 @@
           "name": "Sweden",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Sweden.png"
         },
-        "dateTime": "2018-06-23T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-23T18:00:00.000Z"
+        },
         "matchNumber": 29,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -503,11 +503,11 @@
           "name": "Panama",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Panama.png"
         },
-        "dateTime": "2018-06-24T12:00:00",
+        "dateTime": {
+          "$date": "2018-06-24T12:00:00.000Z"
+        },
         "matchNumber": 30,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -520,11 +520,11 @@
           "name": "Senegal",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Senegal.png"
         },
-        "dateTime": "2018-06-24T15:00:00",
+        "dateTime": {
+          "$date": "2018-06-24T15:00:00.000Z"
+        },
         "matchNumber": 31,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -537,11 +537,11 @@
           "name": "Colombia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Colombia.png"
         },
-        "dateTime": "2018-06-24T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-24T18:00:00.000Z"
+        },
         "matchNumber": 32,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -554,11 +554,11 @@
           "name": "Egypt",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Egypt.png"
         },
-        "dateTime": "2018-06-25T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-25T14:00:00.000Z"
+        },
         "matchNumber": 33,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -571,11 +571,11 @@
           "name": "Russia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Russia.png"
         },
-        "dateTime": "2018-06-25T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-25T14:00:00.000Z"
+        },
         "matchNumber": 34,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -588,11 +588,11 @@
           "name": "Portugal",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Portugal.png"
         },
-        "dateTime": "2018-06-25T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-25T18:00:00.000Z"
+        },
         "matchNumber": 35,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -605,11 +605,11 @@
           "name": "Morocco",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Morocco.png"
         },
-        "dateTime": "2018-06-25T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-25T18:00:00.000Z"
+        },
         "matchNumber": 36,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -622,11 +622,11 @@
           "name": "Peru",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Peru.png"
         },
-        "dateTime": "2018-06-26T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-26T14:00:00.000Z"
+        },
         "matchNumber": 37,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -639,11 +639,11 @@
           "name": "France",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/France.png"
         },
-        "dateTime": "2018-06-26T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-26T14:00:00.000Z"
+        },
         "matchNumber": 38,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -656,11 +656,11 @@
           "name": "Argentina",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Argentina.png"
         },
-        "dateTime": "2018-06-26T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-26T18:00:00.000Z"
+        },
         "matchNumber": 39,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -673,11 +673,11 @@
           "name": "Croatia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Croatia.png"
         },
-        "dateTime": "2018-06-26T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-26T18:00:00.000Z"
+        },
         "matchNumber": 40,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -690,11 +690,11 @@
           "name": "Germany",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Germany.png"
         },
-        "dateTime": "2018-06-27T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-27T14:00:00.000Z"
+        },
         "matchNumber": 41,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -707,11 +707,11 @@
           "name": "Sweden",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Sweden.png"
         },
-        "dateTime": "2018-06-27T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-27T14:00:00.000Z"
+        },
         "matchNumber": 42,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -724,11 +724,11 @@
           "name": "Costa Rica",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Costa_Rica.png"
         },
-        "dateTime": "2018-06-27T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-27T18:00:00.000Z"
+        },
         "matchNumber": 43,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -741,11 +741,11 @@
           "name": "Brazil",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Brazil.png"
         },
-        "dateTime": "2018-06-27T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-27T18:00:00.000Z"
+        },
         "matchNumber": 44,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -758,11 +758,11 @@
           "name": "Colombia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Colombia.png"
         },
-        "dateTime": "2018-06-28T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-28T14:00:00.000Z"
+        },
         "matchNumber": 45,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -775,11 +775,11 @@
           "name": "Poland",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Poland.png"
         },
-        "dateTime": "2018-06-28T14:00:00",
+        "dateTime": {
+          "$date": "2018-06-28T14:00:00.000Z"
+        },
         "matchNumber": 46,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -792,11 +792,11 @@
           "name": "Belgium",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Belgium.png"
         },
-        "dateTime": "2018-06-28T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-28T18:00:00.000Z"
+        },
         "matchNumber": 47,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     },
     {
@@ -809,283 +809,11 @@
           "name": "Tunisia",
           "flagUrl": "https://s3-us-west-2.amazonaws.com/football-static-content/fifa2018/flags/Tunisia.png"
         },
-        "dateTime": "2018-06-28T18:00:00",
+        "dateTime": {
+          "$date": "2018-06-28T18:00:00.000Z"
+        },
         "matchNumber": 48,
-        "matchType": "GROUP",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1A",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2B",
-          "flagUrl": null
-        },
-        "dateTime": "2018-06-30T14:00:00",
-        "matchNumber": 49,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1C",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2D",
-          "flagUrl": null
-        },
-        "dateTime": "2018-06-30T18:00:00",
-        "matchNumber": 50,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1B",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2A",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-01T14:00:00",
-        "matchNumber": 51,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1D",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2C",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-01T18:00:00",
-        "matchNumber": 52,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1E",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2F",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-02T14:00:00",
-        "matchNumber": 53,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1G",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2H",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-02T18:00:00",
-        "matchNumber": 54,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1F",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2E",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-03T14:00:00",
-        "matchNumber": 55,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "1H",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "2G",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-03T18:00:00",
-        "matchNumber": 56,
-        "matchType": "ROUND16",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "W49",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "W50",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-06T14:00:00",
-        "matchNumber": 57,
-        "matchType": "QUARTERS",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "W53",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "W54",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-06T18:00:00",
-        "matchNumber": 58,
-        "matchType": "QUARTERS",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "W51",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "W52",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-07T14:00:00",
-        "matchNumber": 59,
-        "matchType": "QUARTERS",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "W55",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "W56",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-07T18:00:00",
-        "matchNumber": 60,
-        "matchType": "QUARTERS",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "W57",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "W58",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-10T18:00:00",
-        "matchNumber": 61,
-        "matchType": "SEMIS",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "W59",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "W60",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-11T18:00:00",
-        "matchNumber": 62,
-        "matchType": "SEMIS",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "L61",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "L62",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-14T14:00:00",
-        "matchNumber": 63,
-        "matchType": "THIRD",
-        "homeTeamScore": null,
-        "awayTeamScore": null
-      }
-    },
-    {
-      "match": {
-        "homeTeam": {
-          "name": "W61",
-          "flagUrl": null
-        },
-        "awayTeam": {
-          "name": "W62",
-          "flagUrl": null
-        },
-        "dateTime": "2018-07-15T15:00:00",
-        "matchNumber": 64,
-        "matchType": "FINAL",
-        "homeTeamScore": null,
-        "awayTeamScore": null
+        "matchType": "GROUP"
       }
     }
   ]
