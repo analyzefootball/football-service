@@ -53,7 +53,7 @@ public class User extends Entity {
     }
 
     public boolean isAdmin() {
-        return role.equals(Role.ADMIN);
+        return role.equals(Role.ADMIN) || role.equals(Role.SYSTEM);
     }
 
     void encodePassword(BCryptPasswordEncoder encoder) {
