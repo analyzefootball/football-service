@@ -34,7 +34,15 @@ public class Prediction {
         match.setAwayTeamScore(score);
     }
 
-    public boolean isLocked() {
+    boolean isLocked() {
         return LocalDateTime.now().plusHours(1).isAfter(match.getDateTime());
+    }
+
+    boolean isPredicted() {
+        return match.getHomeTeamScore() != null && match.getHomeTeamScore() != null;
+    }
+
+    boolean isReady() {
+        return isLocked() && isPredicted();
     }
 }

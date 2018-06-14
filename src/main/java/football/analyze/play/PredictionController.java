@@ -38,7 +38,7 @@ public class PredictionController {
         List<PlayedMatch> matchPredictions = new ArrayList<>();
 
         List<UserPrediction> userPredictions = userList.stream().map(user -> {
-            List<Prediction> lockedPredictions = user.getPredictions().stream().filter(Prediction::isLocked).collect(Collectors.toList());
+            List<Prediction> lockedPredictions = user.getPredictions().stream().filter(Prediction::isReady).collect(Collectors.toList());
             return lockedPredictions.stream().map(prediction -> {
                 UserPrediction userPrediction = new UserPrediction();
                 userPrediction.setUser(user.getDisplayName());
