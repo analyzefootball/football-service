@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 /**
  * @author Hassan Mushtaq
@@ -39,5 +40,19 @@ public class Match {
         this.dateTime = dateTime;
         this.matchNumber = matchNumber;
         this.matchType = matchType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Match match = (Match) o;
+        return Objects.equals(matchNumber, match.matchNumber);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(matchNumber);
     }
 }

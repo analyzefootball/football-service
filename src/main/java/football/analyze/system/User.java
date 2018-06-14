@@ -77,15 +77,16 @@ public class User extends Entity {
 
     public void initializePredictions(List<Match> matches) {
         if (predictions == null) {
-            predictions =new ArrayList<>(48);
+            predictions = new ArrayList<>(48);
         }
         this.predictions.addAll(matches.stream().map(Prediction::new).collect(Collectors.toList()));
     }
 
-    void predict(Match match, Integer homeTeamScore, Integer awayTeamScore) {
-        if (match == null) {
+    public void predict(Prediction newPrediction) {
+        if (newPrediction == null) {
             throw new IllegalArgumentException();
         }
+        Match match = newPrediction.getMatch();
         Prediction existing = predictions.stream()
                 .filter(prediction -> prediction.getMatch().getMatchNumber().equals(match.getMatchNumber()))
                 .findFirst().orElse(null);
@@ -93,7 +94,7 @@ public class User extends Entity {
             existing = new Prediction(match);
             predictions.add(existing);
         }
-        existing.predictHomeTeamScore(homeTeamScore);
-        existing.predictAwayTeamScore(awayTeamScore);
+        existing.predictHomeTeamScore(match.getHomeTeamScore());
+        existing.predictAwayTeamScore(match.getAwayTeamScore());
     }
 }

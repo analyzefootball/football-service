@@ -75,4 +75,9 @@ public class DefaultUserServiceImpl implements UserService {
         existingUser.update(user, bCryptPasswordEncoder);
         userRepository.save(existingUser);
     }
+
+    @Override
+    public void saveUser(User user) {
+        userRepository.save(user);
+    }
 }
