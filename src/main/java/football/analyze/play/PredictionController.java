@@ -41,7 +41,7 @@ public class PredictionController {
             List<Prediction> lockedPredictions = user.getPredictions().stream().filter(Prediction::isLocked).collect(Collectors.toList());
             return lockedPredictions.stream().map(prediction -> {
                 UserPrediction userPrediction = new UserPrediction();
-                userPrediction.setUser(user.getDisplayName() + " (" + user.getUsername() + ")");
+                userPrediction.setUser(user.getDisplayName());
                 userPrediction.setMatch(prediction.getMatch());
                 return userPrediction;
             }).collect(Collectors.toList());
