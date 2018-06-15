@@ -154,7 +154,7 @@ public class UserControllerTest {
         mockMvc.perform(request)
                 .andExpect(status().isOk());
 
-        User user = userRepository.findByUsername(regularUser.getUsername());
+        User user = userRepository.findByUsernameIgnoreCase(regularUser.getUsername());
 
         assertThat(user.getDisplayName(), is("new display name"));
     }
@@ -171,7 +171,7 @@ public class UserControllerTest {
         mockMvc.perform(request)
                 .andExpect(status().isOk());
 
-        User user = userRepository.findByUsername(regularUser.getUsername());
+        User user = userRepository.findByUsernameIgnoreCase(regularUser.getUsername());
 
         assertThat(user.getDisplayName(), is("new display name"));
     }

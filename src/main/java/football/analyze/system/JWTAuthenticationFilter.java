@@ -75,7 +75,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) auth.getPrincipal();
 
-        User appUser = userRepository.findByUsername(user.getUsername());
+        User appUser = userRepository.findByUsernameIgnoreCase(user.getUsername());
 
         Collection<GrantedAuthority> grantedAuthorities = user.getAuthorities();
 

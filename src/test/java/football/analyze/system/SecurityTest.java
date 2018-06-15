@@ -82,4 +82,16 @@ public class SecurityTest {
                 .andExpect(status().isOk())
                 .andExpect(header().exists("Authorization"));
     }
+
+    @Test
+    public void shouldReturnSuccessAndHeaderWithSuccessfulLoginIgnoreCase() throws Exception {
+        User adminUser = new User("admin user", Role.ADMIN, "admin@admin.io", bCryptPasswordEncoder.encode("password"), null);
+        userRepository.save(adminUser);
+        MockHttpServletRequestBuilder request = post("/login")
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content("{\"username\" : \"admIN@aDMin.io\", \"password\" : \"password\"}");
+        mockMvc.perform(request)
+                .andExpect(status().isOk())
+                .andExpect(header().exists("Authorization"));
+    }
 }

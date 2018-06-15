@@ -105,7 +105,7 @@ public class DefaultUserServiceImplTest {
     @Test
     public void getByUserName() {
         final User user1 = new User("display name", Role.REGULAR, "username", "password", null);
-        when(userRepository.findByUsername("username")).thenReturn(user1);
+        when(userRepository.findByUsernameIgnoreCase("username")).thenReturn(user1);
         User serviceUser = userService.findByUsername("username");
         assertThat(serviceUser, is(user1));
     }
@@ -113,14 +113,14 @@ public class DefaultUserServiceImplTest {
     @Test(expected = IllegalArgumentException.class)
     public void updateUserShouldThrowExceptionIfUsernameNotFound() {
         final User user1 = new User("display name", Role.REGULAR, "username", "password", null);
-        when(userRepository.findByUsername("abcd")).thenReturn(null);
+        when(userRepository.findByUsernameIgnoreCase("abcd")).thenReturn(null);
         userService.updateUser("abcd", user1);
     }
 
     @Test
     public void updateUserShouldUpdateGivenFields() {
         final User original = new User("display name", Role.REGULAR, "username", "password", null);
-        when(userRepository.findByUsername("username")).thenReturn(original);
+        when(userRepository.findByUsernameIgnoreCase("username")).thenReturn(original);
         final Team team1 = new Team("abcd", "qpr");
         final User updatedUser = new User("new name", Role.ADMIN, null, "password2", team1);
         userService.updateUser("username", updatedUser);

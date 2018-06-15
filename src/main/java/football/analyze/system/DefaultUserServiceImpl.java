@@ -2,7 +2,6 @@ package football.analyze.system;
 
 import football.analyze.invite.Invitation;
 import football.analyze.invite.InvitationRepository;
-import football.analyze.play.Match;
 import football.analyze.play.MatchType;
 import football.analyze.play.Tournament;
 import football.analyze.play.TournamentRepository;
@@ -10,7 +9,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -43,7 +41,7 @@ public class DefaultUserServiceImpl implements UserService {
                 || !invitation.getEmail().equals(user.getUsername()) || !invitation.getRole().equals(user.getRole())) {
             throw new IllegalArgumentException();
         }
-        User existing = userRepository.findByUsername(user.getUsername());
+        User existing = userRepository.findByUsernameIgnoreCase(user.getUsername());
         if (existing != null) {
             throw new IllegalArgumentException();
         }
@@ -63,12 +61,12 @@ public class DefaultUserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        return userRepository.findByUsernameIgnoreCase(username);
     }
 
     @Override
     public void updateUser(String username, User user) {
-        User existingUser = userRepository.findByUsername(username);
+        User existingUser = userRepository.findByUsernameIgnoreCase(username);
         if (existingUser == null) {
             throw new IllegalArgumentException();
         }

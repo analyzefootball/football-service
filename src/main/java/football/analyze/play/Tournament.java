@@ -36,4 +36,10 @@ public class Tournament extends Entity {
         this.groups = groups;
         this.schedule = schedule;
     }
+
+    public void updateMatchResult(Match match) {
+        Match existingMatch = schedule.getMatches().stream().filter(match::equals).findFirst().get();
+        existingMatch.setHomeTeamScore(match.getHomeTeamScore());
+        existingMatch.setAwayTeamScore(match.getAwayTeamScore());
+    }
 }
