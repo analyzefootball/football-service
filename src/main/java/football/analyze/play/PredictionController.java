@@ -69,6 +69,19 @@ public class PredictionController {
         }
     }
 
+    @PutMapping(value = "{username}/force")
+    public ResponseEntity savePredictionForce(@PathVariable String username, @RequestBody Prediction prediction) {
+        try {
+            User user = userService.findByUsername(username);
+            user.predictForce(prediction);
+            userService.saveUser(user);
+            ResourceSupport restUris = new ResourceSupport();
+            return new ResponseEntity<>(restUris, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
     private List<UserMatchPrediction> fromUserPrediction(List<UserPrediction> userPredictions) {
         return userPredictions.stream().map(userPrediction -> new UserMatchPrediction(userPrediction.getUser(), userPrediction.getMatch().getHomeTeamScore(),
                 userPrediction.getMatch().getAwayTeamScore())).collect(Collectors.toList());

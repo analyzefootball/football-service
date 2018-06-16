@@ -5,6 +5,7 @@ import football.analyze.common.Entity;
 import football.analyze.play.Match;
 import football.analyze.play.Prediction;
 import football.analyze.play.Team;
+import football.analyze.play.UserPoints;
 import lombok.Getter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -96,5 +97,22 @@ public class User extends Entity {
         }
         existing.predictHomeTeamScore(match.getHomeTeamScore());
         existing.predictAwayTeamScore(match.getAwayTeamScore());
+    }
+
+    public void predictForce(Prediction newPrediction) {
+        Match match = newPrediction.getMatch();
+        Prediction existing = predictions.stream()
+                .filter(prediction -> prediction.getMatch().getMatchNumber().equals(match.getMatchNumber()))
+                .findFirst().orElse(null);
+        if (existing == null) {
+            existing = new Prediction(match);
+            predictions.add(existing);
+        }
+        existing.predictHomeTeamScoreForce(match.getHomeTeamScore());
+        existing.predictAwayTeamScoreForce(match.getAwayTeamScore());
+    }
+
+    public UserPoints calculatePoints() {
+        return null;
     }
 }

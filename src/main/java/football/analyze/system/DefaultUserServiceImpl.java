@@ -2,13 +2,16 @@ package football.analyze.system;
 
 import football.analyze.invite.Invitation;
 import football.analyze.invite.InvitationRepository;
+import football.analyze.play.Match;
 import football.analyze.play.MatchType;
 import football.analyze.play.Tournament;
 import football.analyze.play.TournamentRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 /**
@@ -47,8 +50,15 @@ public class DefaultUserServiceImpl implements UserService {
         }
         user.encodePassword(bCryptPasswordEncoder);
         Tournament tournament = tournamentRepository.findByName("Fifa 2018 World Cup");
-        user.initializePredictions(tournament.getSchedule().getMatches().stream().filter
-                (match -> match.getMatchType().equals(MatchType.GROUP)).collect(Collectors.toList()));
+        List<Match> basicMatches = new ArrayList<>(48);
+        tournament.getSchedule().getMatches().forEach(match -> {
+            if (match.getMatchType().equals(MatchType.GROUP))   {
+                match.setAwayTeamScore(null);
+                match.setHomeTeamScore(null);
+                basicMatches.add(match);
+            }
+        });
+        user.initializePredictions(basicMatches);
         userRepository.save(user);
         invitationRepository.delete(invitation);
         return user;

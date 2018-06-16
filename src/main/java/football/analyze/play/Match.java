@@ -55,4 +55,18 @@ public class Match {
 
         return Objects.hash(matchNumber);
     }
+
+    public ResultType getResultType() {
+        if (homeTeamScore == null || awayTeamScore == null) {
+            return ResultType.INVALID;
+        }
+        if (homeTeamScore.equals(awayTeamScore)) {
+            return ResultType.DRAW;
+        } else if (homeTeamScore > awayTeamScore) {
+            return ResultType.HOMEWIN;
+        } else if (awayTeamScore > homeTeamScore) {
+            return ResultType.AWAYWIN;
+        }
+        return ResultType.INVALID;
+    }
 }

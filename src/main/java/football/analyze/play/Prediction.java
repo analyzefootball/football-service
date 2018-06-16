@@ -34,6 +34,14 @@ public class Prediction {
         match.setAwayTeamScore(score);
     }
 
+    public void predictHomeTeamScoreForce(Integer score) {
+        match.setHomeTeamScore(score);
+    }
+
+    public void predictAwayTeamScoreForce(Integer score) {
+        match.setAwayTeamScore(score);
+    }
+
     boolean isLocked() {
         return LocalDateTime.now().plusHours(1).isAfter(match.getDateTime());
     }
@@ -44,5 +52,22 @@ public class Prediction {
 
     boolean isReady() {
         return isLocked() && isPredicted();
+    }
+
+    private boolean isCorrectResult(Match actual) {
+        return this.match.equals(actual) && this.match.getResultType().equals(actual.getResultType());
+    }
+
+    private boolean isBonusResult(Match actual) {
+        return isCorrectResult(actual) && this.match.getHomeTeamScore().equals(actual.getHomeTeamScore())
+                && this.match.getAwayTeamScore().equals(actual.getAwayTeamScore());
+    }
+
+    int getCorrectResultPoints(Match actual) {
+        return isCorrectResult(actual) ? match.getMatchType().getCorrectPoints() : 0;
+    }
+
+    int getBonusPoints(Match actual) {
+        return isBonusResult(actual) ? match.getMatchType().getBonusPoints() : 0;
     }
 }
