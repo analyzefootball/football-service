@@ -1,5 +1,6 @@
 package football.analyze.play;
 
+import football.analyze.system.Role;
 import football.analyze.system.User;
 import football.analyze.system.UserService;
 import org.springframework.hateoas.MediaTypes;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,6 +37,7 @@ public class PointsController {
     public ResponseEntity getPointsTable() {
         List<User> userList = userService.findAll();
 
+        userList.removeIf(user -> user.getRole().equals(Role.SYSTEM));
         Tournament tournament = tournamentRepository.findByName("Fifa 2018 World Cup");
 
         List<Match> playedMatches = tournament.getSchedule().getMatches().stream()
@@ -50,6 +53,8 @@ public class PointsController {
         });
 
         PointsTable pointsTable = new PointsTable();
+
+        userPointsList.sort(Comparator.comparing(UserPoints::getTotal));
 
         pointsTable.setUserPoints(userPointsList);
 

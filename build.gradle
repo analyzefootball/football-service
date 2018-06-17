@@ -14,7 +14,7 @@ group = 'analyze-football'
 
 bootJar {
     baseName = 'football-service'
-    version = '0.0.6'
+    version = '0.0.7'
 }
 
 dependencies {
