@@ -54,7 +54,7 @@ public class PointsController {
 
         PointsTable pointsTable = new PointsTable();
 
-        userPointsList.sort(Comparator.comparing(UserPoints::getTotal));
+        userPointsList.sort(Comparator.comparing(UserPoints::getTotal).reversed());
 
         pointsTable.setUserPoints(userPointsList);
 
