@@ -39,5 +39,7 @@ public class PlayedMatch {
         this.matchNumber = match.getMatchNumber();
         this.matchType = match.getMatchType();
         this.userMatchPredictions = userMatchPredictions;
+        this.homeTeamScore = match.getHomeTeamScore();
+        this.awayTeamScore = match.getAwayTeamScore();
     }
 }

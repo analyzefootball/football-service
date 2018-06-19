@@ -27,8 +27,11 @@ public class PredictionController {
 
     private final UserService userService;
 
-    public PredictionController(UserService userService) {
+    private final TournamentRepository tournamentRepository;
+
+    public PredictionController(UserService userService, TournamentRepository tournamentRepository) {
         this.userService = userService;
+        this.tournamentRepository = tournamentRepository;
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_UTF8_VALUE)
@@ -37,11 +40,14 @@ public class PredictionController {
 
         List<PlayedMatch> matchPredictions = new ArrayList<>();
 
+        List<Match> completedMatches = getCompletedMatches();
+
         List<UserPrediction> userPredictions = userList.stream().map(user -> {
             List<Prediction> lockedPredictions = user.getPredictions().stream().filter(Prediction::isReady).collect(Collectors.toList());
             return lockedPredictions.stream().map(prediction -> {
                 UserPrediction userPrediction = new UserPrediction();
                 userPrediction.setUser(user.getDisplayName());
+
                 userPrediction.setMatch(prediction.getMatch());
                 return userPrediction;
             }).collect(Collectors.toList());
@@ -50,7 +56,17 @@ public class PredictionController {
 
         Map<Match, List<UserPrediction>> matchListMap = userPredictions.stream().collect(groupingBy(UserPrediction::getMatch));
 
-        matchListMap.forEach((key, value) -> matchPredictions.add(new PlayedMatch(key, fromUserPrediction(value))));
+        matchListMap.forEach((key, value) ->
+                {
+                    Match copy = new Match(key.getHomeTeam(), key.getAwayTeam(), key.getDateTime(), key.getMatchNumber(), key.getMatchType());
+                    copy.setHomeTeamScore(null);
+                    copy.setAwayTeamScore(null);
+                    int indexOf = completedMatches.indexOf(copy);
+                    Match actual = indexOf == -1 ? copy : completedMatches.get(indexOf);
+                    matchPredictions.add(new PlayedMatch(actual, fromUserPrediction(value)));
+                }
+        );
+
 
         Resources<PlayedMatch> resource = new Resources<>(matchPredictions);
         return new ResponseEntity<>(resource, HttpStatus.OK);
@@ -85,5 +101,11 @@ public class PredictionController {
     private List<UserMatchPrediction> fromUserPrediction(List<UserPrediction> userPredictions) {
         return userPredictions.stream().map(userPrediction -> new UserMatchPrediction(userPrediction.getUser(), userPrediction.getMatch().getHomeTeamScore(),
                 userPrediction.getMatch().getAwayTeamScore())).collect(Collectors.toList());
+    }
+
+    private List<Match> getCompletedMatches() {
+        Tournament tournament = tournamentRepository.findByName("Fifa 2018 World Cup");
+        return tournament.getSchedule().getMatches().stream()
+                .filter(match -> !match.getResultType().equals(ResultType.INVALID)).collect(Collectors.toList());
     }
 }
