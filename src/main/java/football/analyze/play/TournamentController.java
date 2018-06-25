@@ -1,5 +1,6 @@
 package football.analyze.play;
 
+import football.analyze.system.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.Resource;
@@ -23,8 +24,11 @@ public class TournamentController {
 
     private final TournamentRepository tournamentRepository;
 
-    public TournamentController(TournamentRepository tournamentRepository) {
+    private final UserService userService;
+
+    public TournamentController(TournamentRepository tournamentRepository, UserService userService) {
         this.tournamentRepository = tournamentRepository;
+        this.userService = userService;
     }
 
     @GetMapping(produces = MediaTypes.HAL_JSON_UTF8_VALUE)
@@ -50,6 +54,22 @@ public class TournamentController {
             Tournament tournament = tournamentRepository.findByName(tournamentName);
             tournament.updateMatchResult(match);
             tournamentRepository.save(tournament);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Error in TournamentController updateUser", e);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping(value = "{tournamentName}/match/teams")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_SYSTEM') or #username == authentication.name")
+    public ResponseEntity updateMatchTeams(@PathVariable String tournamentName,
+                                      @RequestBody Match match) {
+        try {
+            Tournament tournament = tournamentRepository.findByName(tournamentName);
+            Match existing = tournament.updateMatchTeams(match);
+            tournamentRepository.save(tournament);
+            userService.updateUsersWithMatch(existing);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
             log.error("Error in TournamentController updateUser", e);

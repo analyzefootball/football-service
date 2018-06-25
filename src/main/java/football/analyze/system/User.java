@@ -83,6 +83,10 @@ public class User extends Entity {
         this.predictions.addAll(matches.stream().map(Prediction::new).collect(Collectors.toList()));
     }
 
+    public void addMatch(Match match)   {
+        this.predictions.add(new Prediction(match));
+    }
+
     public void predict(Prediction newPrediction) {
         if (newPrediction == null) {
             throw new IllegalArgumentException();

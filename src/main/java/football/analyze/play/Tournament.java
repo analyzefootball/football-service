@@ -42,4 +42,11 @@ public class Tournament extends Entity {
         existingMatch.setHomeTeamScore(match.getHomeTeamScore());
         existingMatch.setAwayTeamScore(match.getAwayTeamScore());
     }
+
+    public Match updateMatchTeams(Match match)   {
+        Match existingMatch = schedule.getMatches().stream().filter(match::equals).findFirst().get();
+        existingMatch.setHomeTeam(match.getHomeTeam());
+        existingMatch.setAwayTeam(match.getAwayTeam());
+        return existingMatch;
+    }
 }

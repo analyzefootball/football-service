@@ -75,6 +75,13 @@ public class DefaultUserServiceImpl implements UserService {
     }
 
     @Override
+    public void updateUsersWithMatch(Match existing) {
+        List<User> users = userRepository.findAll();
+        users.forEach(user -> user.addMatch(existing));
+        userRepository.saveAll(users);
+    }
+
+    @Override
     public void updateUser(String username, User user) {
         User existingUser = userRepository.findByUsernameIgnoreCase(username);
         if (existingUser == null) {
