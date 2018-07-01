@@ -1,6 +1,7 @@
 package football.analyze.play;
 
 import lombok.Getter;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author Hassan Mushtaq
@@ -19,5 +20,9 @@ public class Team {
     public Team(String name, String flagUrl) {
         this.name = name;
         this.flagUrl = flagUrl;
+    }
+
+    public boolean isActualTeam()   {
+        return StringUtils.isNotBlank(flagUrl);
     }
 }

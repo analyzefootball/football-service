@@ -57,4 +57,18 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PostMapping(value = "{username}")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_SYSTEM') or #username == authentication.name")
+    public ResponseEntity updateUserMissingMatches(@PathVariable String username) {
+        try {
+            userService.updateUserWithMissingMatches(username);
+            ResourceSupport restUris = new ResourceSupport();
+            restUris.add(linkTo(methodOn(UserController.class).getUser(username)).withRel("self"));
+            return new ResponseEntity<>(restUris, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error("Error in UserController updateUser", e);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 }

@@ -42,6 +42,10 @@ public class Match {
         this.matchType = matchType;
     }
 
+    public boolean isActualMatch()  {
+        return homeTeam.isActualTeam() && awayTeam.isActualTeam();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

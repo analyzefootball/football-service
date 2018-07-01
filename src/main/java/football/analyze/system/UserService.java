@@ -17,4 +17,6 @@ public interface UserService {
     User findByUsername(String username);
 
     void updateUsersWithMatch(Match existing);
+
+    void updateUserWithMissingMatches(String username);
 }
